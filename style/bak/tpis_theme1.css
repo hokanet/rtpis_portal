@@ -1,0 +1,205 @@
+/*Custom CSS Config for TPIS help*/
+/*This CSS will overwrite the config in _main.css*/
+
+/*************************************************************************************************************************************************/
+/*Theme setting (Color & Font size)*/
+/*************************************************************************************************************************************************/
+
+header{
+	background-image:url(../../img/TPIS-BAR.png);	/*the bar image*/
+}
+header, #topNav a {
+	background-color:#e5f2ff;					/*background color in header (background color under the bar image)*/
+	color:#000A3B;								/*text color in top navigation bar (in normal)*/
+}
+#btnbackTOP, #sideNavOpen a {
+	background-color: #000A3B;					/*background color of "TOP" button and open button of side menu (view under half-screen)*/
+	 color: yellow;								/*text color of color of "TOP" button and open button of side menu (view under half-screen)*/
+}
+h1,h2,h3{
+	color:DarkBlue;								/*title color of text content*/
+}
+#myUL{
+	color:#000A3B;								/*text color of side menu (view under full-screen)*/
+}
+#myUL a{
+	color:inherit;								/*Hyperlink of color of side menu (view under full-screen) (inherit from #myUL)*/
+}
+#myUL li.current{
+	background-color:#e5f2ff;					/*Background color to highlight current page in side menu*/
+	color:MediumBlue;							/*text color to highlight current page in side menu*/
+}
+#myUL li:hover, #btnbackTOP:hover, #topNav a:hover, #sideNavOpen a:hover {
+	background-color: #b3d9ff;					/*Background color when mouse-hover the menu item*/
+	color:darkblue;								/*text color when mouse-hover the menu item*/
+}
+#topNav .active {
+  background-color: #000A3B;					/*Background color to highlight current page in top navigation*/
+  color:yellow;									/*text color to highlight current page in top navigation*/
+}
+@media screen and (max-width: 1500px) {
+  #sideNav{
+	background-color:#000A3B;					/*background color of side menu (view under half-screen)*/
+	color:white;								/*text color of side menu (view under half-screen)*/
+  } 
+  #container.responsive{
+	  margin-left:40%;
+  }
+  #sideNav.responsive{
+	  width:40%;  
+ }
+
+/*************************************************************************************************************************************************/
+/*Display Content Config*/
+/*************************************************************************************************************************************************/
+/*Style for 2 Columns Table*/
+.tbl_2cols_list{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left;
+	outline-style:solid;
+	outline-width:1px;
+}
+.tbl_2cols_list tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.tbl_2cols_list th {
+    text-align:center;
+	background-color:#a3cbf5;
+	border: 1px;
+	border-style:dotted;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.tbl_2cols_list th.col1{
+	width:30%;
+}
+.tbl_2cols_list td{
+	text-align:left;
+	border: 1px;
+	border-style:dotted;
+}
+
+
+/*Style for 3 Columns Table*/
+.tbl_3cols_list{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left;
+	outline-style:solid;
+	outline-width:1px;
+}
+.tbl_3cols_list tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.tbl_3cols_list th {
+    text-align:center;
+	background-color:#a3cbf5;
+	border: 1px;
+	border-style:dotted;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.tbl_3cols_list th.col1{
+	width:30%;
+}
+.tbl_3cols_list th.col2{
+	width:15%;
+}
+.tbl_3cols_list td{
+	text-align:left;
+	border: 1px;
+	border-style:dotted;
+}
+
+/*Style for 4 Columns Table*/
+.tbl_4cols_list{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left;
+	font-size:16px;
+}
+.tbl_4cols_list tr:nth-child(even) {
+	background-color: #e6f2ff;
+}
+.tbl_4cols_list th {
+    text-align:center;
+	background-color:#a3cbf5;
+	padding:5px;	
+	border: 1px;
+	border-style:dotted;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+}
+.tbl_4cols_list th.col1{
+	width:20%;
+}
+.tbl_4cols_list th.col2{
+	width:30%;
+}
+.tbl_4cols_list th.col3{
+	width:15%;
+}
+.tbl_4cols_list td{
+	border: 1px;
+	border-style:dotted;
+	text-align:left;
+	padding:10px 5px 5px 10px;
+}
+
+
+/*Custom style for types of plans*/
+article.types_of_plans section{
+	text-align:center;
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;
+	margin-bottom:10px;
+} 
+article.types_of_plans table{
+	width:100%;
+	text-align:center;
+	vertical-align:middle;	
+}
+article.types_of_plans .acc_content_header{
+	text-align:left; /*override default class setting*/
+}
+
+
+/*Custom style for workflow for ozp*/
+#workflow_of_ozp img,#workflow_of_s6x img{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;	
+}
+#workflow_of_ozp section,#workflow_of_s6x section{
+	outline-width:1px;
+	outline-color:black;
+	outline-style:solid;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;	
+}
+#workflow_of_ozp ul,#workflow_of_s6x ul{
+	text-align:left;
+}
+
+/*Custom style for attributes of tpis data*/
+article.attribute_tpis section{
+	text-align:center;
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;
+	margin-bottom:10px;
+}
+article.attribute_tpis table{
+	width:100%;
+	text-align:center;
+	vertical-align:middle;	
+}
+article.attribute_tpis .acc_content_header{
+	text-align:left; /*override default class setting*/
+}
+
+.img_tpis_icon_btn{
+	display:inline;
+	vertical-align:text-bottom;
+}

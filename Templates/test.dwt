@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>無標題文件</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" type="text/css" href="style/tpis_main.css">
+<link href="style/tpis_menu.css" rel="stylesheet" type="text/css">
+<script src="js/tpis_loadTemplate.js"></script>
+</head>
+
+<body onLoad="loadTemplate()">
+<div class="container">
+	<header>Header with Navigation Bar </header>
+	<nav>Vertical Navigation menu</nav>
+	<article class="content">main body</article>
+	<footer>footer Part</footer>
+</div>
+
+
+
+</body>
+</html>

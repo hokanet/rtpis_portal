@@ -1,0 +1,343 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: #fefefe;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+/* ~~ 這個固定寬度的容器環繞著所有其他區塊 ~~ */
+.testing{
+	display:none;
+}
+#container {
+	width: 84%;
+	background-color: #FFFFFF;
+	margin: 0 auto; /* 兩側的自動值與寬度結合後，版面便會置中對齊 */
+}
+
+header{
+	height:125px;
+	text-align:right;
+	background-color:#BCFFED;
+	background-image:url(../../img/CAD-bar.png);
+}
+main{
+	padding:1%;
+	width: 73%;
+	float: right;
+}
+article{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:18px;
+}
+nav{
+	float: left;
+	width: 23%;
+	padding:1%;
+	text-decoration: none;		
+}
+section{
+	/*padding:0px 10px 10px 10px;*/
+}
+/* ~~ 頁尾 ~~ */
+footer {
+	padding: 10px 0;
+	position: relative;/* 這會為 IE6 提供 hasLayout 以進行適當的清除動作 */
+	clear: both; /* 這個 clear 屬性可以強制 .container 辨識欄結束於何處以及包含欄的位置 */
+	text-align:center;
+	color:#A4A4A4;
+	font-size:12px;
+}
+
+/*HTML5 支援 – 設定新的 HTML5 標籤以顯示區塊並使瀏覽器能夠正確顯示標籤。 */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+
+.lastupdateddate{
+	font-size:12px;
+	font-style:italic;
+	text-align:right;
+}
+
+p{
+	line-height:150%;
+}
+
+
+h1{
+	font-size: 22px;
+	color:blue;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-weight:bold;
+}
+
+h2{
+	font-size:20px;
+	color:blue;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+h3{
+	font-size:18.5px;
+	color:blue;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+span.itemheader{
+	font-size: 18.5px;
+	color: blue;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:bold;
+}
+
+section ul > li{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+section a{
+	text-decoration:none;	
+}
+section a:hover{
+	color:#E9181C;
+}
+section img{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*Style for 3 Columns Table*/
+.tbl_3cols_list{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left	
+}
+.tbl_3cols_list tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.tbl_3cols_list th {
+    text-align:center;
+	background-color:#f2f2f2;
+}
+.tbl_3cols_list th.col1{
+	width:30%;
+}
+.tbl_3cols_list th.col2{
+	width:15%;
+}
+.tbl_3cols_list td{
+	text-align:left;
+}
+
+
+
+
+	  #title {
+		  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		  font-size:24px;
+		  font-weight: bold;
+		  color: brown;
+	  }
+	  
+	  #subtitle{
+		  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		  font-weight: bold;
+		  font-size:18px;
+		  color: green;
+	  }
+		
+		
+	  .txt{
+	  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	  color : blue;
+	  font-size:17px;
+	  }
+	  
+	  .tbl{ 
+	  color : brown;
+	  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	  line-height: 150%;		
+	  font-size:17px;
+	  }
+	  
+	  .tbltxt{
+	  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	  color : black;
+	  font-size:17px;
+	  line-height: 150%;	
+	  }
+	
+		
+.whats_new{
+	margin:0px;
+	display:inline;
+	vertical-align:central;
+}
+.pdf_view{
+	width:100%;
+	height:950px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.pdf_view iframe{
+	width:100%;
+	height:95%;
+}
+.pdf_view img{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+
+
+.acc_content_header {
+	width:100%;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 1%;
+    border: none;
+    text-align:center;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+	font-weight:bold;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.acc_content_header.active, .acc_content_header:hover {
+    background-color: #ccc;
+}
+
+.acc_content_header:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.acc_content_header.active:after {
+    content: "\2212";
+}
+
+.acc_content {
+    padding: 0 0px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/*Custom style for types of plans*/
+article.types_of_plans section{
+	text-align:center;
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;
+	margin-bottom:10px;
+}
+article.types_of_plans table{
+	width:100%;
+	text-align:center;
+	vertical-align:middle;	
+}
+article.types_of_plans .acc_content_header{
+	text-align:left; /*override default class setting*/
+}
+
+
+/* 
+
+.btntab {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+*/
+
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	float: none;
+	background-color: #f1f1f1;
+	text-align: center;
+	width: 100%;
+	padding: 2px;
+	font-size: 18px;
+}
+
+
+/* Style the buttons inside the tab */
+.tab_links {
+	font-size:16px;	/*same font-size with h2*/
+	font-weight:bold;
+	padding: 14px 28px;
+    float:inherit;	
+    background-color: inherit;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+/* Change background color of buttons on hover */
+.tab_links:hover {
+    background-color: #ddd;
+}
+/* Create an active/current tablink class */
+.tab_links.active {
+    background-color: #ccc;
+}
+
+.tab_content{
+/*    display: none;*/
+}
+
+
+/*Downlaod Button*/
+.btnDownlaod{
+  font-size:16px;	/*same font-size with h2*/
+  font-weight:bold;
+  display: inline-block;
+  padding: 10px 50px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #F91F22;
+  border: none;
+}
+
+
+
+/*Back to Top Button*/
+#btnbackTOP {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #000A3B;
+  color: yellow;  
+}
+
+
+#btnbackTOP:hover {
+  background-color: #b3d9ff;
+  color:#000A3B;
+}

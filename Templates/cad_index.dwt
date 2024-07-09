@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" --> 
+<title>::CAD Help::</title> 
+<!-- TemplateEndEditable -->
+<!-- title will be updated by Javascript in bottom -->
+<link rel="icon" href="../img/Portal-Icon-2.ico"/>
+<link rel="stylesheet" type="text/css" href="../style/_main.css">
+ <link rel="stylesheet" type="text/css" href="../style/cad_theme.css">
+ 
+<!-- <script src="../js/tpis_loadTemplate.js"></script> -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+ 
+<body onLoad="loadCurrent_item()">
+<div class="container" id="container">
+    <div class="testing">
+        filename: <span id="filename"></span> , accordionItem~a-href:<span id="ahref"></span><br>
+        filters: <span id="searchwords"></span><br>
+        matched #myUL&gt;li: <span id="match_li"></span> <br> 
+        not matched #myUL&gt;li: <span id="notmatch_li"></span><br>
+        no.of "&lt;a&gt;&quot; tag: <span id="no_of_ahref"></span><br>
+        no.of  &quot;&lt;a&gt;&quot; tag with href: <span id="no_of_a"></span><br>
+        match_li length: <p id="match_li_check"></p><br>
+        
+    </div>
+
+	<header>
+      <div id="topNav" class="topNav">
+        <a href="javascript:void(0);" class="icon" onclick="opentopNav()">&#9776;</a>
+        <a href="../index.html">Carto Portal</a>          
+        <a href="../CAD/index.html" class="active">CAD</a>      
+        <a href="../ArcGIS/index.html">ArcGIS</a>
+		<a href="../ArcGISPro/index.html">ArcGIS Pro</a>		  
+        <a href="../TPIS/index.html">TPIS</a>
+		<a href="../QGIS/index.html">QGIS</a>
+		<a href="../FME/index.html">FME</a>
+        <a href="../ODPLP/index.html">ODP/LP</a>                      
+        <a href="../MAINTENANCE/index.html">Maintenance</a>            
+        <a href="../TRAINING/index.html">Training</a>      
+        <a href="../REFERENCE/index.html">Reference</a>          
+        <a href="../contact.html">Contact Us</a>   
+        <a href="../about_portal.html">About Portal</a>                                    
+
+      </div>
+    </header>
+    
+    <div id="sideNavOpen"><a href="#" onclick="opensideNav()">CAD</a></div>
+ 
+	<nav>
+    	<aside id="sideNav" class="sideNav">
+          <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closesideNav()">&times;</a>
+          <input type="text" id="myInput" onkeyup="accordionSearch()" placeholder="Search for topics...">
+           
+          <ul id="myUL">          
+       <!--Topic Title-->
+            <li class="accordion"><div class="caret"></div><a href='#'>What's new ?</a></li>  
+              <ul class="panel">
+                <li><a class="accordionItem" href="../CAD/00_Whats_news/update_history.html" target="_self">Update History</a></li>
+              </ul>
+                      
+                                       
+       <!--Topic Title-->                       
+            <li class="accordion"><div class="caret"></div><a href='#'>Site Notice</a></li> 
+              <ul class="panel">                  
+                  <li><a class="accordionItem" href="../CAD/03A_Site_Notice/SiteNotice_Pamphlets.html" TARGET="_self">Information Pamphlets</a></li>
+                  <li><a class="accordionItem" href="../CAD/03A_Site_Notice/Format_Notice.html" TARGET="_self">Sample Notice Format</a></li>
+                  <li><a class="accordionItem" href="../CAD/03A_Site_Notice/Remark_SmallHouse.html" TARGET="_self">Remark For Small House</a></li>
+                    
+                  <li class="accordion"><div class="caret"></div><a href='#'>Setting For Plotter</a></li> 
+                    <ul class="panel">
+                      <li><a class="accordionItem" href="../CAD/03A_Site_Notice/HP7200_Plotter_Roll_protection.html" TARGET="_self">Plotter Roll Protection</a></li>  
+                      <li><a class="accordionItem" href="../CAD/03A_Site_Notice/HP7200_Select_Paper.html" TARGET="_self">Paper Selection</a></li>					
+                    </ul>          
+               </ul>
+               
+       <!--Topic Title-->                 
+            <li class="accordion"><div class="caret"></div><a href='#'>Expanded Gist</a></li>  
+              <ul class="panel">
+               <li><a class="accordionItem" href="../CAD/03B_E-gist/AddStamp.html" TARGET="_self">Add PlanD Stamp Manual</a></li>  
+               <li><a class="accordionItem" href="../CAD/03B_E-gist/CombineGist.html" TARGET="_self">Combine Expanded Gist PDF</a></li>
+              </ul>                
+                
+       <!--Topic Title-->               
+            <li class="accordion"><div class="caret"></div><a href='#'>Application Plan</a></li>      
+              <ul class="panel">
+                   <li><a class="accordionItem" href="../CAD/03C_AR Plan/ApplicationProcessingProcedures.html" TARGET="_self">Processing Procedures</a></li>
+                   <!-- Reference to Carto Instrution -->
+                   <li><a class="accordionItem" href="../CAD/03C_AR Plan/PlansNumbering.html" TARGET="_self">Plans Numbering</a></li>
+                   
+                   <li class="accordion"><div class="caret"></div><a href='#'>Sample Plans</a></li>                   
+                      <ul class="panel">
+                        <li><a class="accordionItem" href="../CAD/03C_AR Plan/Samples in Urban.html" TARGET="_self">Metro Planning Area</a></li>
+                        <li><a class="accordionItem" href="../CAD/03C_AR Plan/Samples in NT.html" TARGET="_self">New Territories Rural Area</a></li>
+                      </ul>
+                    
+             </ul>               
+               
+       <!--Topic Title-->
+            <li class="accordion"><div class="caret"></div><a href='#'>Plotting Plan</a> </li>
+              <ul class="panel"> 
+              		<li class="accordion"><div class="caret"></div><a href='#'>Pentable</a></li>                   
+                        <ul class="panel">
+                          <li><a class="accordionItem" href="../CAD/04_Plotting_Plan/Pentable.html" TARGET="_self">Introduction</a></li>
+                          <li><a class="accordionItem" href="../CAD/04_Plotting_Plan/Pentable_Operation.html" TARGET="_self">Operation</a></li>
+                        </ul>
+                   	<li><a class="accordionItem" href="../CAD/04_Plotting_Plan/Printer_Driver.html" TARGET="_self">Printer Driver</a></li>  
+                   	<li><a class="accordionItem" href="../CAD/04_Plotting_Plan/PSET.html" TARGET="_self">PSET</a></li>  
+                   	<li><a class="accordionItem" href="../CAD/04_Plotting_Plan/PSET_Edit.html" TARGET="_self">PSET File Path </a></li> 
+                  	<li><a class="accordionItem" href="../CAD/04_Plotting_Plan/Print_Fence.html" TARGET="_self">Fence Index Creating</a></li> 
+                   	<li><a class="accordionItem" href="../CAD/04_Plotting_Plan/Plotter_Printer.html" TARGET="_self">Plotter & Printer</a></li>
+                   	<li><a class="accordionItem" href="../CAD/04_Plotting_Plan/Printing_Status.html" TARGET="_self">Printing Job Status</a></li>                                
+              </ul>         
+
+  			  
+	  <!--Topic Title-->
+			<li class="accordion"><a class="accordionItem" href="../CAD/06_3d-Animation-Flythrough/3DAnimation.html" TARGET="_self">3D Animation Model</a></li>  
+                            
+        </ul>
+      </aside>
+    </nav>
+    
+         
+    <main>
+        <div class="lastupdateddate">Last Modified: <!-- TemplateBeginEditable name="last_modified" -->4 Nov, 2020<!-- TemplateEndEditable --></div>
+        <!-- TemplateBeginEditable name="main_content" -->
+        <h1>Page Title (h1)</h1>
+        <article>
+          <section>
+         	 This is the main content area. You can paste your content in here.
+          </section>
+        </article>
+        <!-- TemplateEndEditable -->
+    </main>    
+	<footer> </footer> <!--Set in Main CSS-->
+</div>
+<button onclick="backtoTop()" id="btnbackTOP" title="Go to top">Top</button>
+<script src="../js/responisive_web.js"></script>
+<script>
+	document.getElementsByTagName("title")[0].innerHTML = "::CAD Help:: " + document.getElementsByTagName("h1")[0].innerHTML
+</script>
+<script src="../js/vertical_accordion_menu.js"></script>
+<script src="../js/backtoTop.js"></script>
+
+</body>
+</html>

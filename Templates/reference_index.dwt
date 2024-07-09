@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>::Reference Help::</title> 
+<!-- TemplateEndEditable -->
+<!-- title will be updated by Javascript in bottom -->
+<link rel="icon" href="../img/Portal-Icon-2.ico"/>
+<link rel="stylesheet" type="text/css" href="../style/_main.css">
+<link rel="stylesheet" type="text/css" href="../style/reference_theme.css">
+<!-- <script src="../js/tpis_loadTemplate.js"></script> -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body onLoad="loadCurrent_item()">
+<div class="container" id="container">
+    <div class="testing">
+        filename: <span id="filename"></span> , accordionItem~a-href:<span id="ahref"></span><br>
+        filters: <span id="searchwords"></span><br>
+        matched #myUL&gt;li: <span id="match_li"></span> <br> 
+        not matched #myUL&gt;li: <span id="notmatch_li"></span><br>
+        no.of "&lt;a&gt;&quot; tag: <span id="no_of_ahref"></span><br>
+        no.of  &quot;&lt;a&gt;&quot; tag with href: <span id="no_of_a"></span><br>
+        match_li length: <p id="match_li_check"></p><br>
+    </div>
+
+	<header>
+      <div id="topNav" class="topNav">
+        <a href="javascript:void(0);" class="icon" onclick="opentopNav()">&#9776;</a>
+        <a href="../index.html">Carto Portal</a>          
+        <a href="../CAD/index.html">CAD</a>  
+        <a href="../ArcGIS/index.html">ArcGIS</a>
+		<a href="../ArcGISPro/index.html">ArcGIS Pro</a>		  
+        <a href="../TPIS/index.html">TPIS</a>
+		<a href="../QGIS/index.html">QGIS</a>
+		<a href="../FME/index.html">FME</a>
+        <a href="../ODPLP/index.html">ODP/LP</a>                      
+        <a href="../MAINTENANCE/index.html">Maintenance</a>            
+        <a href="../TRAINING/index.html">Training</a>      
+        <a href="../REFERENCE/index.html" class="active">Reference</a>          
+        <a href="../contact.html">Contact Us</a>
+        <a href="../about_portal.html">About Portal</a>                                          
+      </div>
+    </header>
+    
+    <div id="sideNavOpen"><a href="#" onclick="opensideNav()">Reference</a></div>
+ 
+	<nav>
+    	<aside id="sideNav" class="sideNav">
+          <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closesideNav()">&times;</a>
+          <input type="text" id="myInput" onkeyup="accordionSearch()" placeholder="Search for topics..">
+          <ul id="myUL">
+              <li class="accordion"><div class="caret"></div><a>What's new ?</a></li>
+              <ul class="panel">
+              	<li><a class="accordionItem" href="../REFERENCE/Latest_Update/20180615_iC1000dataDict_CAD.html" target="_self">Latest Announcement</a></li>                   
+                <li><a class="accordionItem" href="../REFERENCE/Latest_Update/update_history.html">Update History</a></li>              
+              </ul>
+       <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Cartographic Manual</a></li>
+              <ul class="panel">
+              	   <li><a class="accordionItem" href="../REFERENCE/carto_manual/Cadestral_info.html" target="_self">Cadastral Information</a></li>
+                  <li><a class="accordionItem" href="../REFERENCE/CM_Instruction/Carto_Instruction.html" target="_self">Cartographic Instruction</a></li>
+                  <li><a class="accordionItem" href="../REFERENCE/carto_manual/OPDLP_Spec.html">Cartographic Specification</a></li>
+                  <li><a class="accordionItem" href="../REFERENCE/carto_manual/tpis_spec.html">TPIS Specification</a></li>                  
+              </ul>                                  
+
+       
+
+       <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Planning Manual</a></li>
+              <ul class="panel">
+                  
+                  <li class="accordion"><div class="caret"></div><a>Extracted SECTION B</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../REFERENCE/Planning_Manual/PM_SectionB_Ch7.html">7: Statutory Plans (OZP)</a></li>
+                    <li><a class="accordionItem" href="../REFERENCE/Planning_Manual/PM_SectionB_Ch8.html">8: Departmental Plans (ODP/LP)</a></li>
+                  </ul>
+                  <li><a class="accordionItem" href="../REFERENCE/Planning_Manual/PM_SectionG.html">Extracted SECTION G</a></li>  
+                  
+                  <li><a class="accordionItem" href="../REFERENCE/Planning_Manual/PM_PlandStandard.html">PlanD Standards & Guidelines</a></li>
+                  
+                  <li><a class="accordionItem" href="../REFERENCE/Planning_Manual/cap137_TownPlanningOrdinance.html" target="new">Town Planning Ordinance</a></li>                         
+                          
+              </ul>
+			  
+    <!--Topic Title-->              
+              <li class="accordion"><div class="caret"></div><a>Lamination of Display Notice</a></li>
+              <ul class="panel">
+
+                   <li><a class="accordionItem" href="../REFERENCE/Lamination/Lam_heatup.html">Heatup Laminator</a></li>
+                   <li><a class="accordionItem" href="../REFERENCE/Lamination/Lam_process.html">Lamination Process</a></li>
+                
+                 
+              </ul>                                   
+                  <!--Topic Title-->              
+              <li class="accordion"><div class="caret"></div><a>e-HKG Gazetteer of Street and Place Names</a></li>
+              <ul class="panel">
+
+                   <li><a class="accordionItem" href="../REFERENCE/e_HKG/e_HKG_2023.html">2023</a></li>
+                   <li><a class="accordionItem" href="../REFERENCE/e_HKG/e_HKG_2024.html">2024</a></li>
+                
+                 
+              </ul>                
+
+    <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>BMS Data Dictionary</a></li>
+              <ul class="panel">
+                <li><a class="accordionItem" href="../REFERENCE/data_reference_file/iB1000.html">iB1000</a></li>
+                <li><a class="accordionItem" href="../REFERENCE/data_reference_file/iB5000.html">iB5000</a></li>                  
+                <li><a class="accordionItem" href="../REFERENCE/data_reference_file/iB10000.html">iB10000</a></li>                                    
+                <li><a class="accordionItem" href="../REFERENCE/data_reference_file/iB20000.html">iB20000</a></li>
+                <li><a class="accordionItem" href="../REFERENCE/data_reference_file/iB50000.html">iB50000</a></li>
+                                                                                      
+                <li><a class="accordionItem" href="../REFERENCE/data_reference_file/iB200000.html">iB200000</a></li>          
+                <li><a class="accordionItem" href="../REFERENCE/data_reference_file/iC1000.html">iC1000</a></li>                  
+                <li><a class="accordionItem" href="../REFERENCE/data_reference_file/iG1000.html">iG1000</a></li>                                  
+              </ul>            
+      <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Land Utilization Map</a></li>
+              <ul class="panel">
+                <li><a class="accordionItem" href="../REFERENCE/LUM_auth/LUM_A0.html">A0 Size Version</a></li>
+                <li><a class="accordionItem" href="../REFERENCE/LUM_auth/LUM_A3.html">A3 Size Version</a></li>                     
+              </ul>             
+	<!--Topic Title-->
+                  
+                  <li class="accordion"><div class="caret"></div><a>Tips for Adobe Products</a></li>
+                  <ul class="panel">
+                    <li class="accordion"><div class="caret"></div><a>Adobe Acrobat</a></li>
+                        <ul class="panel">
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Add_Layer_in_PDF_with_Acrobat.html">Add Layer in PDF</a></li>
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Create_Cut_Mark_in_Acrobat_XI_Pro.html">Create Cut Mark in PDF</a></li>
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Create_Text_Box_in_Acrobat_Pro_DC.html">Create Text Box in Pro DC</a></li>  
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Create_Text_Box_in_Acrobat_XI_Pro.html">Create Text Box in XI Pro</a></li>                   
+                        </ul>
+                    <li class="accordion"><div class="caret"></div><a>Adobe Illustrater</a></li>
+                        <ul class="panel">
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/File_conversion_from_dxf_to_emf_for_Ai.html">Conversion from "dxf" to "emf"</a></li>
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Fixing_PlanD_Logo_in_AI.html">Filling color in PlanD Logo</a></li>               
+                        </ul>
+                    <li class="accordion"><div class="caret"></div><a>Adobe Photoshop</a></li>
+                        <ul class="panel">
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Enhance_Colour_Value_in_Photoshop.html">Enhancing Color Value</a></li>
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Prepare_Base_Shadow_in_Photoshop.html">Base Shadow</a></li>
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Prepare_Transparency_layer_in_Photoshop.html">Transparency Color Layer</a></li>  
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Wrap_Image_for_PPT_in_Photoshop.html">Wrap Image for PPT use</a></li>
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Save_Large_Size_File_in_Photoshop.html">Saving large File</a></li>  
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Enhance_Efficiency_in_Photoshop.html">Enhancing Efficiency</a></li>                   
+                          <li><a class="accordionItem" href="../REFERENCE/Ref-Adobe_Products/Use_GIH_Aerial_Photo_in_MOS.html">Using GIH Aerial Photo</a></li>                   
+                        </ul>  
+                  </ul> 
+<!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>IT Tips</a></li>
+              <ul class="panel">
+              	   <li class="accordion"><div class="caret"></div><a>Lotus Notes</a></li>
+                        <ul class="panel">
+				  			<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Lotus_Notes/LotusNotes_Archives.html">Back Up Email</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Lotus_Notes/LotusNotes_Compact.html">Compact NSF Database</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Lotus_Notes/LotusNotes_OutOfOffice.html">Set out of office</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Lotus_Notes/LotusNotes_Signature.html">Set Signature</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Lotus_Notes/LotusNotes_SpellCheck.html">Spell check</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Lotus_Notes/LotusNotes_InstantMessage.html">Instant Message</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Lotus_Notes/LotusNotes_CheckSpace.html">Check mailbox space</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Lotus_Notes/LotusNotes_WebmailUserGuide.html">Webmail User Guide</a></li>
+				  		</ul>
+				  </li>
+			 	 <li class="accordion"><div class="caret"></div><a>Outlook</a></li>
+                        <ul class="panel">
+				  			<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_Archives.html">Back Up Email</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_Compact.html">Compact .pst Datafile</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_OutOfOffice.html">Set out of office</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_Signature.html">Set Signature</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_SpellCheck.html">Spell check</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_CheckSpace.html">Check mailbox space</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_NewMailNotification.html">E-Mail Notification</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_MeteredConnection.html">Metered Connection</a></li>
+							<li><a class="accordionItem" href="../REFERENCE/IT_Tips/Outlook/Outlook_WorkOffline.html">Working offline to online</a></li>
+				  		</ul>
+				  </li>
+			  		<li class="accordion"><div class="caret"></div><a>E-Leave</a></li>
+                        <ul class="panel">
+				  			<li><a class="accordionItem" href="../REFERENCE/IT_Tips/eLeave/eLeave_ChangeRecomApproveOfficer.html">Change Recommend &amp; Approve Officer</a></li>
+						</ul>
+				  </li>
+                  <li><a class="accordionItem" href="../REFERENCE/IT_Tips/Diagnostics_test.html">Hard drives diagnostics test</a></li>
+			      <li><a class="accordionItem" href="../REFERENCE/IT_Tips/RemoteWorkstation.html">Remote Workstation</a></li>
+              </ul>
+                  
+                  
+       <!--Topic Title-->
+                   <li class="accordion"><div class="caret"></div><a>Freeware</a></li>
+                  <ul class="panel">
+                  <li><a class="accordionItem" href="../REFERENCE/Ref-Freeware/Blue_Mirror.html">Blue Mirror</a></li>                                        
+                  <li><a class="accordionItem" href="../REFERENCE/Ref-Freeware/Notepad.html">Notepad++</a></li>
+                  <li><a class="accordionItem" href="../REFERENCE/Ref-Freeware/Use_of_PDFill_ver7.html">PDFill</a></li>   					  
+                  <li><a class="accordionItem" href="../REFERENCE/Ref-Freeware/GIMP.html">GIMP</a></li>
+				  <li><a class="accordionItem" href="../REFERENCE/Ref-Freeware/AnyBurn.html">AnyBurn</a></li>  
+                  </ul>
+                  
+       <!--Topic Title-->              
+              <li class="accordion"><div class="caret"></div><a>Useful Website</a></li>
+              <ul class="panel">
+					<li><a class="accordionItem" href="../REFERENCE/GovHRMS/govhrms.html">GovHRMS</a></li>
+                   <!--<li><a class="accordionItem" href="https://docs.gimp.org/en/introduction.html" target="_blank">GIMP</a></li>-->
+                   <li><a class="accordionItem" href="https://color.adobe.com/create/color-wheel/" target="_blank">Adobe Color Schemes</a></li>      
+                   <li><a class="accordionItem" href="../REFERENCE/Outside_Link/HKMS/HKMS.html">LandsD Map Product Collection (HKMS 2.0)</a></li>
+                   <li><a class="accordionItem" href="https://dsp.landsd.ccgo.hksarg/" target="new">SMO Information Portal (SMOIP)</a></li>             
+              </ul>
+			  
+          </ul>
+        </aside>
+    </nav>
+    
+      
+         
+    <main>
+        <div class="lastupdateddate">Last Modified: <!-- TemplateBeginEditable name="last_modified" -->21 June, 2024<!-- TemplateEndEditable --></div>
+        <!-- TemplateBeginEditable name="main_content" -->
+        <h1>Coming Soon</h1>
+        <article>
+          <section>
+            <img src="../img/comingsoon.png" width="700" height="300" alt=""/>          
+          </section>
+        </article>
+        <!-- TemplateEndEditable -->
+    </main>    
+	<footer></footer> <!--Set in Main CSS-->
+</div>
+<button onclick="backtoTop()" id="btnbackTOP" title="Go to top">Top</button>
+<script src="../js/responisive_web.js"></script>
+<script>
+	document.getElementsByTagName("title")[0].innerHTML = "::Reference:: " + document.getElementsByTagName("h1")[0].innerHTML
+</script>
+<script src="../js/vertical_accordion_menu.js"></script>
+<script src="../js/backtoTop.js"></script>
+
+</body>
+</html>

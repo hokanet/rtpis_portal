@@ -1,0 +1,127 @@
+/*Custom CSS Config for TPIS help*/
+/*This CSS will overwrite the config in _main.css*/
+
+/*************************************************************************************************************************************************/
+/*Theme setting (Color & Font size)*/
+/*************************************************************************************************************************************************/
+
+header{
+	background-image:url(../img/portal-bar.png);/*the bar image*/
+}
+header, #topNav a{
+  	background-color: #f0e6ff;					/*background color in header (background color under the bar image)*/
+	color:#000A3B;								/*text color in top navigation bar (in normal)*/
+}
+main{
+	display:block;
+	padding:1%;
+	width: 98%;
+	margin-left:auto;
+	margin-right:auto;
+	float:none;
+	font-size:18px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;	
+}
+main img{
+	display:inline-block;
+	margin-left:10px;
+	margin-right:10px;
+}
+nav{
+	width: 100%;
+	text-align: center;
+	float: none;
+	padding: 0%;
+	text-decoration: none;
+}
+h1{
+	color:#6F42C1;								/*title color of text content*/
+	text-align:center;
+}
+#btnbackTOP, #sideNavOpen a {
+ 	background-color: #000A3B;					/*background color of "TOP" button and open button of side menu (view under half-screen)*/						
+	color: yellow;								/*text color of color of "TOP" button and open button of side menu (view under half-screen)*/
+}
+#myUL{
+	color:#000A3B;								/*text color of side menu (view under full-screen)*/
+}
+#myUL a{
+	color:inherit;								/*Hyperlink of color of side menu (view under full-screen) (inherit from #myUL)*/
+}
+#myUL li.current{
+	background-color:#e5f2ff;					/*Background color to highlight current page in side menu*/
+	color:blue;									/*text color to highlight current page in side menu*/
+}
+#myUL li:hover, #btnbackTOP:hover, #topNav a:hover, #sideNavOpen a:hover {
+	background-color: #d0b3ff;					/*Background color when mouse-hover the menu item*/
+	color:darkblue;								/*text color when mouse-hover the menu item*/
+}
+#topNav .active {
+ 	background-color: #56329a;					/*Background color to highlight current page in top navigation*/
+	color:yellow;								/*text color to highlight current page in top navigation*/
+}
+@media screen and (max-width: 1280px) {
+  #sideNav{
+	background-color:#000A3B;					/*background color of side menu (view under half-screen)*/
+	color:white;								/*text color of side menu (view under half-screen)*/
+  } 
+  main{
+	display:block;
+	padding:0%;
+	width: 100%;	  
+  }
+  main img{
+    display:block;
+	margin-left:auto;
+	margin-right:auto;
+  }
+ }
+
+/*************************************************************************************************************************************************/
+/*Display Content Config*/
+/*************************************************************************************************************************************************/
+/*************************************************************************************************************************************************/
+/*Contact Display*/
+/*************************************************************************************************************************************************/
+
+/*Style for 3 Columns Table for Contact Us Page*/
+.tbl_3cols_list{
+	width: 75%;
+	outline-style:solid;
+	outline-width:2px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+.tbl_3cols_list th {
+	text-align:center;
+	background-color:#d0b3ff;
+
+}
+.tbl_3cols_list th.col1{
+	width:30%;
+}
+.tbl_3cols_list th.col2{
+	width:15%;
+}
+.tbl_3cols_list td{
+	border: 1px;
+	border-style:dotted;
+	text-align:center;
+
+}
+
+#imgMain{
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	
+	}
+.about_portal{
+	padding:0%;
+
+}
+.about_portal h1{
+	text-align:left;
+}

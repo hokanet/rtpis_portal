@@ -1,0 +1,684 @@
+/*Custom CSS Config for TPIS help*/
+/*This CSS will overwrite the config in _main.css*/
+
+/*************************************************************************************************************************************************/
+/*Theme setting (Color & Font size)*/
+/*************************************************************************************************************************************************/
+
+header{
+	background-image:url(../img/QGIS-bar.png);	/*the bar image*/
+}
+header, #topNav a {
+	background-color:#cdedff;					/*background color in header (background color under the bar image)*/
+	color:#000A3B;								/*text color in top navigation bar (in normal)*/
+}
+#btnbackTOP, #sideNavOpen a {
+	background-color: #0075ab;					/*background color of "TOP" button and open button of side menu (view under half-screen)*/
+	 color: yellow;								/*text color of color of "TOP" button and open button of side menu (view under half-screen)*/
+}
+h1,h2,h3{
+	color:DarkBlue;								/*title color of text content*/
+}
+#myUL{
+	color:#000A3B;								/*text color of side menu (view under full-screen)*/
+}
+#myUL a{
+	color:inherit;								/*Hyperlink of color of side menu (view under full-screen) (inherit from #myUL)*/
+}
+#myUL li.current{
+	background-color:#cdedff;					/*Background color to highlight current page in side menu*/
+	color:MediumBlue;							/*text color to highlight current page in side menu*/
+}
+#myUL li:hover, #btnbackTOP:hover, #topNav a:hover, #sideNavOpen a:hover {
+	background-color: #ccffff;					/*Background color when mouse-hover the menu item*/
+	color:darkblue;								/*text color when mouse-hover the menu item*/
+}
+#topNav .active {
+  	background-color: #0075ab;					/*Background color to highlight current page in top navigation*/
+  	color:yellow;								/*text color to highlight current page in top navigation*/
+}
+@media screen and (max-width: 1280px) {
+  #sideNav{
+	background-color:#0075ab;					/*background color of side menu (view under half-screen)*/
+	color:white;								/*text color of side menu (view under half-screen)*/
+  }
+  #sideNav.responsive
+  {
+	  width:35%;
+  }
+  #container.responsive{
+	  margin-left:35%;
+  }
+  .schema_diagram{
+  	  max-width: 100%;
+	  height:auto;
+  }
+  .schema_diagram img{
+  	  max-width: 100%;
+	  height:auto;
+  }  
+ }
+
+
+/*************************************************************************************************************************************************/
+/*Div Content Config*/
+/*************************************************************************************************************************************************/
+.partSection{
+	display: block;
+	margin-top:50px;
+	margin-bottom:50px;
+}
+
+
+/*************************************************************************************************************************************************/
+/*Note & Tips Box*/
+/*************************************************************************************************************************************************/
+.noteTip
+{
+	display: block;
+	padding: 12px;
+	border-bottom-left-radius: 30px;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;	
+	background: #FFFA51;
+	border: 1px solid #EBDF88;
+}
+.noteTip-title
+{
+	display: block;
+    color: #fff;
+    background: #FFD628;
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+}
+.noteRemind
+{
+	display: block;
+	padding: 12px;
+	border-bottom-left-radius: 10 px;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;	
+	background-color: #A8E6FF;
+	border: 1px solid #9FC7ED;
+    margin-bottom: 0px;
+}
+
+
+.noteRemind-title
+{
+	display: block;
+    color: #fff;
+    background: #A7AFF0;
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+}
+
+/*************************************************************************************************************************************************/
+/*Display Content Config*/
+/*************************************************************************************************************************************************/
+img.content_graphic
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+}
+
+img.content_graphic70c
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: auto;
+}
+img.content_graphic70
+{
+  display: block;
+  width: 70%;
+  height: auto;
+}
+img.content_graphic50c
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+}
+img.content_graphic50
+{
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+img.content_graphic40c
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: auto;
+}
+
+img.content_graphic40
+{
+  display: block;
+  width: 40%;
+  height: auto;
+}
+
+/*General Table Syle*/
+table{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left;
+	font-size:16px;	
+}
+tr:first-child{
+    text-align:center;
+}
+
+tr:nth-child(even) {
+	background-color: #e6f2ff;
+}
+th{
+	font-weight:bold;
+	font-size:larger;
+    text-align:center;
+	background-color:#a3cbf5;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+
+	padding:5px;	
+	border: 1px;
+	border-style:dotted;
+}
+td{
+	border: 1px;
+	border-style:dotted;
+	text-align:center;
+	padding:10px 5px 5px 10px;
+}
+td:last-child{
+	text-align: left;
+}
+tr:nth-child(1){
+	width: 20%;
+}
+
+
+/*Style for 2 Columns Table*/
+.tbl_2cols_list{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left;
+	outline-style:solid;
+	outline-width:1px;
+}
+.tbl_2cols_list tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.tbl_2cols_list th {
+    text-align:center;
+	background-color:#a3cbf5;
+	border: 1px;
+	border-style:dotted;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.tbl_2cols_list th.col1{
+	width:30%;
+}
+.tbl_2cols_list td{
+	text-align:left;
+	border: 1px;
+	border-style:dotted;
+}
+.tbl_2cols_list td.tbl_center_align{
+	text-align:center;
+}
+
+/*Style for 3 Columns Table*/
+.tbl_3cols_list{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left;
+	outline-style:solid;
+	outline-width:1px;
+}
+.tbl_3cols_list tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.tbl_3cols_list th {
+    text-align:center;
+	background-color:#a3cbf5;
+	border: 1px;
+	border-style:dotted;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.tbl_3cols_list th.col1{
+	width:30%;
+}
+.tbl_3cols_list th.col2{
+	width:15%;
+}
+.tbl_3cols_list td{
+	text-align:left;
+	border: 1px;
+	border-style:dotted;
+}
+
+/*Style for 4 Columns Table*/
+.tbl_4cols_list{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left;
+	font-size:16px;
+}
+.tbl_4cols_list tr:nth-child(even) {
+	background-color: #e6f2ff;
+}
+.tbl_4cols_list th {
+    text-align:center;
+	background-color:#a3cbf5;
+	padding:5px;	
+	border: 1px;
+	border-style:dotted;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+}
+.tbl_4cols_list th.col1{
+	width:20%;
+}
+.tbl_4cols_list th.col2{
+	width:30%;
+}
+.tbl_4cols_list th.col3{
+	width:15%;
+}
+.tbl_4cols_list td{
+	border: 1px;
+	border-style:dotted;
+	text-align:left;
+	padding:10px 5px 5px 10px;
+}
+/*Style for Center Algin Feild*/
+
+
+/*Custom style for types of plans*/
+article.types_of_plans section{
+	text-align:center;
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;
+	margin-bottom:10px;
+}
+article.types_of_plans table{
+	width:100%;
+	text-align:center;
+	vertical-align:middle;	
+}
+article.types_of_plans .acc_content_header{
+	text-align:left; /*override default class setting*/
+}
+
+
+
+
+
+/*Custom style for attributes of tpis data*/
+article.attribute_tpis section{
+	text-align:center;
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;
+	margin-bottom:10px;
+}
+article.attribute_tpis table{
+	width:100%;
+	text-align:center;
+	vertical-align:middle;	
+}
+article.attribute_tpis .acc_content_header{
+	text-align:left; /*override default class setting*/
+}
+#topics_content, #background, #attribute_table,#editing_feature_geometry, #editing_feature_attributes, #data_verification, #related_topics, #data_relationship, #help_moive{
+}
+.topics_content, .background, .attribute_table,.editing_feature_geometry, .editing_feature_attributes, .data_verification, .related_topics, .data_relationship, .help_moive{
+}
+.attribute_table table{
+	border-collapse: collapse;
+	width: 100%;
+	text-align:left;
+	font-size:16px;	
+	border: 1px;
+	border-style:dotted;	
+}
+.attribute_table th{
+    text-align:center;
+	background-color:#a3cbf5;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	border: 1px;
+	border-style:dotted;	
+}
+.attribute_table td{
+	border: 1px;
+	border-style:dotted;	
+}
+.attribute_table td:nth-child(1){
+	width:12%;
+	font-weight:bold;
+}
+.attribute_table td:nth-child(2){
+	width:12%;
+	text-align:center;
+}
+.attribute_table td:nth-child(3){
+	width:12%;
+	text-align:center;	
+}
+.attribute_table td:nth-child(4){
+	width:12%;
+	text-align:center;	
+}
+.attribute_table td:nth-child(5){
+	width:12%;
+	text-align:center;	
+}
+.attribute_table tr:nth-child(even) {
+	background-color: #e6f2ff;
+}
+.attribute_table tr:nth-child(1){
+	font-weight:bold;
+	font-size:larger;
+    text-align:center;
+	background-color:#a3cbf5;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+}
+.help_moive_flash{
+	vertical-align:top;
+	width:100%;
+	height:720px;
+/*	height:calc(100vw * 0.68);*/
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:1280px;
+
+}
+#update_ozp_plan, #update_ozp_schm_line{
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;	
+}
+#update_ozp_plan button, #update_ozp_schm_line button{
+	text-align:left;
+}
+
+/*Style for Schema Diagram*/
+.schema_diagram{
+	display:block;
+	width:650px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.schema_diagram table, .schema_diagram th, .schema_diagram td{
+    border: 1px solid black;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.schema_diagram table{
+	width:100%;
+    border-spacing: 0;
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;	
+
+}
+.schema_diagram th{
+	background-color:rgba(240,240,240,1.00);
+
+}
+.schema_diagram td:first-child{
+	width:30%;
+	font-weight:bold;
+	vertical-align:central;
+	text-align:center;
+}
+.schema_diagram img{
+	display:block;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+.list_copy_softcopies{
+	width:100%;
+    border-spacing: 1;
+	text-align:center;
+}
+
+.list_copy_softcopies th{
+    text-align:center;
+	background:rgba(0,204,153,1.00);
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.list_copy_softcopies tr:nth-child(1){
+	font-weight:bold;
+}
+.list_copy_softcopies tr:nth-child(2){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies tr:nth-child(3){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies tr:nth-child(4){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies tr:nth-child(5){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies tr:nth-child(6){
+	background:rgba(214,214,245,1.00);
+}
+.list_copy_softcopies tr:nth-child(7){
+	background:rgba(214,214,245,1.00);
+}
+.list_copy_softcopies tr:nth-child(8){
+	background:rgba(214,214,245,1.00);
+}
+.list_copy_softcopies tr:nth-child(9){
+	background:rgba(204,236,255,1.00);
+}
+.list_copy_softcopies tr:nth-child(10){
+	background:rgba(204,236,255,1.00);
+}
+.list_copy_softcopies tr:nth-child(11){
+	background:rgba(204,236,255,1.00);
+}
+.list_copy_softcopies td:last-child{
+	text-align:left;
+	width:30%;
+}
+
+
+/*Style for Feat_Line Symbols*/
+
+.list_symbols{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 16px;	
+}
+.list_symbols th{
+  background-color:#a3cbf5;
+  font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+  font-size: larger;
+  font-weight:bold;	
+}
+.list_symbols tbody{
+	border-bottom: 1px solid grey;
+}
+.list_symbols tbody td{
+  padding: 5px;
+  border-bottom:1px dashed #ddd;
+  border-left:1px solid #ddd;
+  border-right:1px solid #ddd;
+}
+.list_symbols tbody:hover{
+	background-color: #f1f1f1;
+}
+.object_name{
+	width:70%;
+	text-align:left;
+}
+.symbol_code{
+	width:15%;
+	text-align:center;
+}
+.symbol_grahic{
+	width:15%;
+	text-align:center;	
+}
+.list_font{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  text-align:center;		
+}
+.list_font th{
+  background-color:#a3cbf5;
+  font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+  font-size: larger;
+  font-weight:bold;	
+}
+.list_font th[rowspan]:nth-child(n+3){
+	background:rgba(194,255,240,1.00);
+}
+.list_font th[colspan]:nth-child(6){
+	background:rgba(194,255,240,1.00);
+}
+.list_font th[rowspan]:nth-child(n+7){
+	background:rgba(214,214,245,1.00);
+}
+.list_font th[colspan]:nth-child(8){
+	background:rgba(214,214,245,1.00);
+}
+.list_font tr:nth-child(2) th:nth-child(-n+3){
+	background:rgba(194,255,240,1.00);
+}
+.list_font tr:nth-child(2) th:nth-child(n+4){
+	background:rgba(214,214,245,1.00);
+}
+.list_font td:first-child{
+	text-align:left;
+	width:25%;
+}
+.list_font td{
+  padding: 5px;
+  border-bottom:1px dashed #ddd;
+  border-left:1px solid #ddd;
+  border-right:1px solid #ddd;
+}
+.list_font td:nth-child(n+2){
+	width:7%;
+}
+
+/*Style of button*/
+.checkin_flow {
+	outline-width:1px;
+	outline-color:black;
+	outline-style:solid;
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.checkin_flow button{
+    background-color: #eee;
+	width:100%;
+    color: #444;
+    cursor: pointer;
+    padding: 1%;
+    border: none;
+    text-align:center;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+	font-weight:bold;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.checkin_flow  button.active, .checkin_flow  button:hover {
+    background-color: #ccc;
+}
+
+.checkin_flow  button:after {
+
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.checkin_flow.active:after {
+
+}
+
+
+@media screen and (max-width: 1200px) {
+	.help_moive_flash{
+		height:calc(100vw * 0.58);
+	}
+}
+
+.update_history{
+	border-collapse: collapse;
+	width: 100%;
+	text-align:left;
+	font-size:16px;	
+	border: 1px;
+	border-style:solid;	
+}
+.update_history th{
+    text-align:left;
+	background-color:#cdedff;	/*Same as header background-color*/
+	font-size:18px;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	border: 1px;
+	border-style:solid;	
+}
+.update_history td{
+	border: 1px;
+	padding:5px;
+	border-style:dotted;
+	vertical-align:central;
+}
+.update_history td:nth-child(1){
+	width:10%;
+}
+
+.tab {
+    overflow:auto;
+	float:none;
+    background-color: #f1f1f1;
+	text-align:center;
+	width:100%;
+	padding:2px;
+	font-size:18px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+  	justify-content:center;
+
+}
+
+
+/* Style the buttons inside the tab */

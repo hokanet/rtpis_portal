@@ -1,0 +1,877 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: #fefefe;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+area:active{
+	outline: 0;
+}
+area:focus{
+	outline: 0;
+}
+/* ~~ 這個固定寬度的容器環繞著所有其他區塊 ~~ */
+.testing{
+	display:none;
+}
+#container {
+	width: 1680px;
+	margin-left:calc((100% - 1680px)/2);
+	margin-right:calc((100% - 1680px)/2);
+/*	margin: 0 auto; /* 兩側的自動值與寬度結合後，版面便會置中對齊 */
+	background-color: white;	
+}
+header{
+	height:125px;
+	color:black;
+	text-align:right;
+	background-color:black;	
+	background-image:url(../img/TPIS-BAR.png);
+}
+main{
+	padding:1%;
+	width: 73%;
+	float: right;
+}
+article{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:17px;
+}
+nav{
+	float: left;
+	width: 23%;
+	padding:1%;
+	text-decoration: none;	
+}
+section{
+	/*padding:0px 10px 10px 10px;*/
+}
+/* ~~ 頁尾 ~~ */
+footer {
+	padding: 10px 0;
+	position: relative;/* 這會為 IE6 提供 hasLayout 以進行適當的清除動作 */
+	clear: both; /* 這個 clear 屬性可以強制 .container 辨識欄結束於何處以及包含欄的位置 */
+	text-align:center;
+	color:#A4A4A4;
+	font-size:14px;
+}
+footer:after{
+	content:"Planning Department ISLS Cartographic Team © 2020";	
+}
+
+/*HTML5 支援 – 設定新的 HTML5 標籤以顯示區塊並使瀏覽器能夠正確顯示標籤。 */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+
+.lastupdateddate{
+	font-size:12px;
+	font-style:italic;
+	text-align:right;
+}
+p{
+	line-height:150%;
+}
+h1{
+	font-size: 22px;
+	color: blue;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-weight:bold;
+}
+h2{
+	font-size:20px;
+	color:blue;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+h3{
+	font-size:18.5px;
+	color:blue;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+span.itemheader{
+	font-size: 18.5px;
+	color: blue;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:bold;
+}
+
+section ul > li{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+section ol > li{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+section a{
+	text-decoration:none;	
+}
+section a:hover{
+	color:#E9181C;
+}
+sectoion a:visited{
+	color:rgba(121,0,124,1.00);
+}
+/*section img{
+	display: block;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:auto;
+	margin-right:auto;
+}*/
+section {
+	margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.whats_new{
+	margin:0px;
+	display:inline;
+	vertical-align:central;
+}
+.warning{
+	color:red;
+}
+.pdf_view{
+	width:98%;
+	height:950px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.pdf_view iframe{
+	width:100%;
+	height:95%;
+}
+.pdf_view img{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+/*Back to Top Button*/
+#btnbackTOP {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;  	
+}
+#btnbackTOP:hover {
+  background-color: lightgrey;
+  color:black;
+}
+
+
+
+
+/*************************************************************************************************************************************************/
+/*CSS Config for Menu*/
+/*************************************************************************************************************************************************/
+
+/*Top Menu*/
+#topNav {
+  overflow: hidden;
+  float: right;
+}
+#topNav a {
+  float: left;
+  display: block;
+  padding:10px;
+  
+  text-align: center;	
+  text-decoration: none;
+  
+  font-size: 18px;
+  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:white;
+  background-color:black;	/*Same as background-color in <header>*/
+}
+#topNav a:hover {
+  background-color: lightgrey;
+  color:black;
+}
+#topNav .active {
+  background-color: grey;
+  color:yellow;
+  font-weight:bold;
+}
+#topNav .icon {
+  display: none;
+}
+
+/*Left Menu*/
+#myInput {
+    background-image: url("../img/searchicon.png"); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+}
+#myUL {
+    /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+	list-style:none;
+	text-decoration:none;
+	font-size:20px;
+	color:black;	/*Font Color in left menu*/
+}	
+#myUL ul{
+	font-size:18px;
+}
+#myUL ul>ul{
+	font-size:16px;
+}
+#myUL ul>ul>li{
+	font-size:16px;
+}
+#myUL ul.panel {
+    display: none;	
+	padding-left:15px;
+	list-style:none;	
+	/*padding-left:1px;*/
+}
+#myUL ul.panel.show {
+    display: block !important;
+}
+#myUL li{
+	cursor: pointer;
+	display:block;
+	padding-top:5px;
+	padding-bottom: 5px;
+
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#myUL li:hover{
+	background-color:lightgrey;
+	color:black;
+}
+
+#myUL li.current{
+	background-color:grey;
+	color:yellow;
+}
+
+#myUL li.accordion{
+    font-weight:bold;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+    margin-bottom:0px;
+}
+
+#myUL li.accordion.active{ 	/*For frameset version*/
+/*	background-color:#b3daff;*/
+/*    border-bottom:none;
+    border-right: 6px solid transparent;
+    border-left-color: transparent;
+    border-top-color:initial;*/
+}
+#myUL a{
+	margin-left:5px;
+	displayL:list-item;
+	color:inherit;
+	text-decoration:inherit;
+}
+#myUL a.accordionItem{
+	display:list-item;
+}
+/* carets */
+#myUL li.accordion > div.caret {
+    color:inherit;
+    display:inline-block;
+
+    margin-bottom:0px;
+    margin-right:6px;
+	margin-left:5px;	
+    width: 0;
+    height: 0;
+    overflow:hidden;/*for IE6*/
+    border-style:solid;
+    border-width:6px; /*caret size is 6px now*/
+    position:relative;
+    border-bottom:6px solid transparent;
+    border-right: none;
+    border-left-color:initial;
+    border-top-color: transparent;
+}
+
+#myUL li.accordion.active > div.caret {
+    margin-bottom:3px;
+    margin-right:0px;
+	margin-left:5px;	
+    border-bottom:none;
+    border-right: 6px solid transparent;
+    border-left-color: transparent;
+    border-top-color:initial;
+}
+
+
+/*************************************************************************************************************************************************/
+/*For Responsive web view*/
+/*************************************************************************************************************************************************/
+
+#sideNavOpen{	/*sideMenu Open button*/
+	text-align:center;
+
+	width: 100px;
+	position: fixed;
+  	transform-origin: left top;
+
+	
+	left: 0px;
+	top: 225px;	
+						
+	-ms-transform: rotate(270deg);	    /* Rotate div */
+	-webkit-transform: rotate(270deg);	/* Rotate div */
+	transform: rotate(270deg);			/* Rotate div */
+}
+#sideNavOpen a {
+	display:none;
+	background-color:black;
+	border-radius: 0 0 5px 5px;
+	
+	text-decoration: none;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+    color: white;
+
+	transition: 0.3s;
+}
+
+#sideNavOpen a:hover {
+	background-color:lightgrey;
+	color:black;				/*opposite to background-color of #sideNavOpen a*/
+}
+
+#sideNav .closebtn {
+	display:none;
+}
+@media screen and (max-width: 1680px) {
+  #container {
+	  width:100%;
+	  margin:0;
+  }	
+}
+
+@media screen and (max-width: 1280px) {
+  body{
+  	overflow-x: hidden;
+  }
+  #container {
+	  width:100%;
+	  margin:0;
+  }
+  #container.responsive{
+	  margin-left:26.5%;
+  	  transition: margin-left 0.5s;	  
+  }
+  main{
+	padding:3%;
+	width: 94%;
+	float:none;
+  }  
+
+  #topNav{
+	display:block;
+	float:none;
+  }
+  #topNav a{
+  	display: none;
+  }
+  #topNav a.icon {
+    float: right;
+    display: block;
+	font-size:1.25em;
+    font-style: normal;
+    font-weight:bold;
+    text-decoration: inherit;
+    text-align: center;
+    speak: none;
+	padding:0.5em;
+  }
+
+  #topNav.responsive {
+	  position: relative;
+	  background-color:black;
+   }
+  #topNav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+  }
+  #topNav.responsive .icon {
+    position:absolute;
+    right: 0;
+    top: 0;
+  }
+
+    
+  #sideNavOpen a{
+	display:block;
+  }
+  
+  #sideNav{
+	height: 100%;
+/*	max-height:100%;*/
+	width: 0px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+/*	overflow-y:scroll;*/
+	transition: 1.0s;
+/*	padding-top: 60px;*/
+/*	padding-bottom: 60px;*/
+/* overwrite default list font color*/	
+	background-color:black;
+	color:white;
+  } 
+  #sideNav #closebtn {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	text-decoration:none;
+	color:inherit;
+
+  } 
+  #sideNav #myInput{
+	  margin-top:60px;
+  }
+  #sideNav.responsive
+  {
+	  width:26.5%;
+	  padding-left:10px;
+	  padding-right:10px;
+  }
+
+  #sideNav.responsive #myUL {
+	  color:inherit;
+  }	
+  .content_graphic{
+	  max-width: 100%;
+	  height:auto;
+  }  
+
+}
+
+/*************************************************************************************************************************************************/
+/*Graphic*/
+/*************************************************************************************************************************************************/
+
+/*Small image*/
+.small_icon{
+	display:inline;
+	vertical-align:text-bottom;	
+}
+.content_graphic{
+	display: block;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+figcaption{
+	text-align: center;
+}
+/*************************************************************************************************************************************************/
+/*Accordion Content Display*/
+/*************************************************************************************************************************************************/
+
+/*Style for header button of accordion content*/
+.acc_content_header {
+	width:100%;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 1%;
+    border: none;
+    text-align:center;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+	font-weight:bold;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.acc_content_header.active, .acc_content_header:hover {
+    background-color: #ccc;
+}
+
+.acc_content_header:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.acc_content_header.active:after {
+    content: "\2212";
+}
+/*
+.acc_content {
+    padding: 0 0px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}*/
+
+.acc_content {
+	outline-style:solid;
+	outline-color:black;
+	outline-width:0px;
+	margin-bottom:10px;	
+	
+	padding: 0 0px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+	margin-top: 0px;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+	float:none;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+	text-align:center;
+	width:100%;	
+	padding:0px;
+	font-size:18px;
+}
+
+/* Style the buttons inside the tab */
+.tab_links {
+	font-size:16px;	/*same font-size with h2*/
+	font-weight:bold;
+	width:50%;
+    padding: 1%;
+    float: left;		
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* Change background color of buttons on hover */
+.tab_links:hover {
+    background-color: #ddd;
+}
+/* Create an active/current tablink class */
+.tab_links.active {
+    background-color: #ccc;
+}
+
+.tab_content{
+/*    display: none;*/
+}
+
+
+details{
+	outline-width:1px;
+	outline-color:black;
+	outline-style:solid;
+
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	width:100%;	
+
+}
+
+summary {
+  display: block;
+/*  cursor: pointer;  	*/
+/*  transition: .3s;	*/
+/*  border-bottom: 2px solid;	*/
+  
+	width:inherit;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+/*	margin: 1%;*/
+    padding: 1% 0% 1% 1%;	
+    border: none;
+    text-align:center;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+	font-weight:bold;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	 list-style: none;
+}
+summary:hover{
+	background-color: #ccc;
+}
+    
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-right: 1%;
+}
+
+
+details[open] > summary {
+   
+}
+
+details[open] > summary:after {
+   content: "\2212";
+}
+
+details[open] > div > p{
+	opacity: 0;
+	animation-name: showContent;
+	animation-duration: 0.6s;
+	animation-delay: 0.2s;
+	animation-fill-mode: forwards;
+	padding-left: 20px;
+}
+
+details[open] > div {
+	animation-name: slideDown;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+details[open] > div > img {
+	opacity: 0;
+	height: 100%;
+	animation-name: showImage;
+	animation-duration: 0.3s;
+	animation-delay: 0.15s;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: var(--contentHeight);
+    padding: 20px;
+  }
+}
+
+@keyframes showImage {
+  from {
+    opacity: 0;
+    clip-path: inset(50% 0 50% 0);
+    transform: scale(0.4);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.divRow{
+	text-align: center;
+	width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;	
+}
+.divCol{
+	text-align: center;	
+	align-self:center;
+	width: 50%;
+}
+
+
+
+/*General Table Syle*/
+table{
+    border-collapse: collapse;
+    width: 100%;
+	text-align:left;
+	font-size:16px;	
+}
+tr:first-child,
+th{
+/*	font-weight:bold;*/
+	font-size:18.5px;
+    text-align:center;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	padding:5px;	
+	border: 1px;
+	border-style:dotted;
+	background-color:#a3cbf5;
+}
+td{
+	border: 1px;
+	border-style:dotted;
+	text-align:center;
+	padding:10px 5px 5px 10px;
+}
+td:first-child{
+/*	width:20%;	*/
+}
+td:last-child{
+	text-align: left;
+}
+tr:nth-child(even) {
+/*	background-color: #e6f2ff;*/
+}
+
+
+
+/* For Image Modal*/
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(255,255,255); /* Fallback color */
+  background-color: rgba(255,255,255,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  
+	max-height: calc(90vh - 47px);
+	width: auto;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: black;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 62px; /*Must be lower than TopNav*/
+  right: 35px;
+  color: darkblue;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/*************************************************************************************************************************************************/
+/*Disables the selection & Disables the drag event*/
+/*************************************************************************************************************************************************/
+
+/* Disables the selection */
+.disableselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge*/
+   user-select: none;          /* Non-prefixed version, currently 
+                                  not supported by any browser */
+}
+
+/* Disables the drag event 
+(mostly used for images) */
+.disabledrag{
+   -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+   user-drag: none;
+}

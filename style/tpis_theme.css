@@ -1,0 +1,617 @@
+/*Custom CSS Config for TPIS help*/
+/*This CSS will overwrite the config in _main.css*/
+
+/*************************************************************************************************************************************************/
+/*Theme setting (Color & Font size)*/
+/*************************************************************************************************************************************************/
+
+header{
+	background-image:url(../img/TPIS-BAR.png);	/*the bar image*/
+}
+header, #topNav a {
+	background-color:#e5f2ff;					/*background color in header (background color under the bar image)*/
+	color:#000A3B;								/*text color in top navigation bar (in normal)*/
+}
+#btnbackTOP, #sideNavOpen a {
+	background-color: #000A3B;					/*background color of "TOP" button and open button of side menu (view under half-screen)*/
+	 color: yellow;								/*text color of color of "TOP" button and open button of side menu (view under half-screen)*/
+}
+h1,h2,h3{
+	color:DarkBlue;								/*title color of text content*/
+}
+#myUL{
+	color:#000A3B;								/*text color of side menu (view under full-screen)*/
+}
+#myUL a{
+	color:inherit;								/*Hyperlink of color of side menu (view under full-screen) (inherit from #myUL)*/
+}
+#myUL li.current{
+	background-color:#e5f2ff;					/*Background color to highlight current page in side menu*/
+	color:MediumBlue;							/*text color to highlight current page in side menu*/
+}
+#myUL li:hover, #btnbackTOP:hover, #topNav a:hover, #sideNavOpen a:hover {
+	background-color: #b3d9ff;					/*Background color when mouse-hover the menu item*/
+	color:darkblue;								/*text color when mouse-hover the menu item*/
+}
+#topNav .active {
+  	background-color: #000A3B;					/*Background color to highlight current page in top navigation*/
+  	color:yellow;								/*text color to highlight current page in top navigation*/
+}
+@media screen and (max-width: 1280px) {
+  #sideNav{
+	background-color:#000A3B;					/*background color of side menu (view under half-screen)*/
+	color:white;								/*text color of side menu (view under half-screen)*/
+  }
+  #sideNav.responsive
+  {
+	  width:35%;
+  }
+  #container.responsive{
+	  margin-left:35%;
+  }
+  .schema_diagram{
+  	  max-width: 100%;
+	  height:auto;
+  }
+  .schema_diagram img{
+  	  max-width: 100%;
+	  height:auto;
+  }  
+ }
+
+/* ID & Class of Topics*/
+#topics_content, #background, #attribute_table,#editing_feature_geometry, #editing_feature_attributes, #data_verification, #related_topics, #data_relationship, #help_movie{
+}
+.topics_content, .background, .attribute_table,.editing_feature_geometry, .editing_feature_attributes, .data_verification, .related_topics, .data_relationship, .help_movie{
+}
+
+/*************************************************************************************************************************************************/
+/*Display Content Config*/
+/*************************************************************************************************************************************************/
+
+
+/*Style for 2 Columns Table*/
+.tbl_2cols_list th:first-child{
+	width:50%;
+}
+.tbl_2cols_list th:last-child{
+	width: auto;
+}
+
+/*Style for 3 Columns Table*/
+.tbl_3cols_list th:first-child{
+	width:30%;
+}
+.tbl_3cols_list th:nth-child(2){
+	width:15%;
+}
+.tbl_3cols_list th:last-child{
+	width: auto;
+}
+
+/*Style for .editing_feature_attributes table */
+.editing_feature_attributes tr:nth-child(even) {
+/*	background-color: #e6f2ff;*/
+}
+.editing_feature_attributes th:first-child{
+	width:20%;
+}
+.editing_feature_attributes th:nth-child(2){
+	width:30%;
+}
+.editing_feature_attributes th:nth-child(3){
+	width:15%;
+}
+.editing_feature_attributes th:last-child{
+	width: auto;
+}
+.editing_feature_attributes td:nth-child(2){
+	text-align: left;
+}
+
+
+
+/* for 6 Cols Table*/
+.attribute_table td:nth-child(1){
+	width:12%;
+}
+.attribute_table td:nth-child(2){
+	width:12%;
+}
+.attribute_table td:nth-child(3){
+	width:12%;
+}
+.attribute_table td:nth-child(4){
+	width:12%;
+}
+.attribute_table td:nth-child(5){
+	width:12%;
+}
+.attribute_table td:last-child{
+	width:auto;
+}
+.attribute_table tr:nth-child(even) {
+	background-color: #e6f2ff;
+}
+
+
+
+
+
+/*Custom style for types of plans*/
+#types_of_plans summary{
+	text-align: left;
+}
+
+#types_of_plans .acc_content_header{
+	text-align:left; /*override default class setting*/
+}
+
+
+/*Custom style for workflow for ozp*/
+#workflow_of_ozp img,#workflow_of_s6x img{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;	
+}
+#workflow_of_ozp section,#workflow_of_s6x section{
+	outline-width:1px;
+	outline-color:black;
+	outline-style:solid;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;	
+}
+#workflow_of_ozp ul,#workflow_of_s6x ul{
+	text-align:left;
+}
+.detail{
+	text-align:right;
+}
+
+
+
+
+.help_movie_flash{
+	vertical-align:top;
+	width:100%;
+	height:720px;
+/*	height:calc(100vw * 0.68);*/
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:1280px;
+}
+#update_ozp_plan, #update_ozp_schm_line{
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;	
+}
+#update_ozp_plan button, #update_ozp_schm_line button{
+	text-align:left;
+}
+
+/*Style for Schema Diagram*/
+.schema_diagram{
+	display:block;
+	width:650px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.schema_diagram table, .schema_diagram th, .schema_diagram td{
+    border: 1px solid black;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.schema_diagram table{
+	width:100%;
+    border-spacing: 0;
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;	
+
+}
+.schema_diagram th{
+	background-color:rgba(240,240,240,1.00);
+
+}
+.schema_diagram td:first-child{
+	width:30%;
+	font-weight:bold;
+	vertical-align:central;
+	text-align:center;
+}
+.schema_diagram img{
+	display:block;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+.list_copy_softcopies{
+	width:100%;
+    border-spacing: 1;
+	text-align:center;
+}
+
+.list_copy_softcopies th{
+    text-align:center;
+	background:rgba(0,204,153,1.00);
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.list_copy_softcopies tr:nth-child(1){
+	font-weight:bold;
+}
+.list_copy_softcopies tr:nth-child(2){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies tr:nth-child(3){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies tr:nth-child(4){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies tr:nth-child(5){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies tr:nth-child(6){
+	background:rgba(214,214,245,1.00);
+}
+.list_copy_softcopies tr:nth-child(7){
+	background:rgba(214,214,245,1.00);
+}
+.list_copy_softcopies tr:nth-child(8){
+	background:rgba(214,214,245,1.00);
+}
+.list_copy_softcopies tr:nth-child(9){
+	background:rgba(204,236,255,1.00);
+}
+.list_copy_softcopies tr:nth-child(10){
+	background:rgba(204,236,255,1.00);
+}
+.list_copy_softcopies tr:nth-child(11){
+	background:rgba(204,236,255,1.00);
+}
+.list_copy_softcopies td:last-child{
+	text-align:left;
+	width:30%;
+}
+
+
+/*Style for Feat_Line Symbols*/
+
+.list_symbols{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 16px;	
+}
+.list_symbols th{
+  background-color:#a3cbf5;
+  font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+  font-size: larger;
+  font-weight:bold;	
+}
+.list_symbols tbody{
+	border-bottom: 1px solid grey;
+}
+.list_symbols tbody tr:first-child,
+.list_symbols tbody td{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;	
+	font-size: 16px;
+	  background-color: white;
+	  padding: 5px;
+	  border-bottom:1px dashed #ddd;
+	  border-left:1px solid #ddd;
+	  border-right:1px solid #ddd;
+}
+.list_symbols td:last-child{
+	text-align:center;
+}
+.list_symbols tbody:hover{
+	background-color: #f1f1f1;
+}
+.object_name{
+	width:70%;
+	text-align:left;
+}
+.symbol_code{
+	width:15%;
+	text-align:center;
+}
+.symbol_grahic{
+	width:15%;
+	text-align:center;	
+}
+.list_font{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  text-align:center;		
+}
+.list_font th{
+  background-color:#a3cbf5;
+  font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+  font-size: larger;
+  font-weight:bold;	
+}
+.list_font th[rowspan]:nth-child(n+3){
+	background:rgba(194,255,240,1.00);
+}
+.list_font th[colspan]:nth-child(6){
+	background:rgba(194,255,240,1.00);
+}
+.list_font th[rowspan]:nth-child(n+7){
+	background:rgba(214,214,245,1.00);
+}
+.list_font th[colspan]:nth-child(8){
+	background:rgba(214,214,245,1.00);
+}
+.list_font tr:nth-child(2) th:nth-child(-n+3){
+	background:rgba(194,255,240,1.00);
+}
+.list_font tr:nth-child(2) th:nth-child(n+4){
+	background:rgba(214,214,245,1.00);
+}
+.list_font td:first-child{
+	text-align:left;
+	width:25%;
+}
+.list_font td{
+  padding: 5px;
+  border-bottom:1px dashed #ddd;
+  border-left:1px solid #ddd;
+  border-right:1px solid #ddd;
+}
+.list_font td:nth-child(n+2){
+	width:7%;
+}
+
+/*Style of button*/
+.checkin_flow {
+	outline-width:1px;
+	outline-color:black;
+	outline-style:solid;
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.checkin_flow button{
+    background-color: #eee;
+	width:100%;
+    color: #444;
+    cursor: pointer;
+    padding: 1%;
+    border: none;
+    text-align:center;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+	font-weight:bold;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.checkin_flow  button.active, .checkin_flow  button:hover {
+    background-color: #ccc;
+}
+
+.checkin_flow  button:after {
+
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.checkin_flow.active:after {
+
+}
+
+#tpis_softcopies button{
+	width:33.3%;
+}
+
+
+.list_copy_softcopies_ura{
+	width:100%;
+    border-spacing: 1;
+	text-align:center;
+}
+
+.list_copy_softcopies_ura th{
+    text-align:center;
+	background:rgba(0,204,153,1.00);
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.list_copy_softcopies_ura tr:nth-child(1){
+	font-weight:bold;
+}
+.list_copy_softcopies_ura tr:nth-child(2){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies_ura tr:nth-child(3){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies_ura tr:nth-child(4){
+	background:rgba(214,214,245,1.00);
+}
+.list_copy_softcopies_ura tr:nth-child(5){
+	background:rgba(214,214,245,1.00);
+}
+.list_copy_softcopies_ura tr:nth-child(6){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies_ura tr:nth-child(7){
+	background:rgba(194,255,240,1.00);
+}
+.list_copy_softcopies_ura td:last-child{
+	text-align:left;
+	width:30%;
+}
+
+
+.install_send2plotter table{
+	border-collapse: collapse;
+	width: 100%;
+	text-align:left;
+	font-size:16px;	
+	border: 1px;
+	border-style:dotted;	
+}
+.install_send2plotter th{
+    text-align:center;
+	background-color:#a3cbf5;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	border: 1px;
+	border-style:dotted;	
+}
+.install_send2plotter td{
+	border: 1px;
+	border-style:dotted;	
+}
+.install_send2plotter td:nth-child(1){
+	width:20%;
+	font-weight:bold;
+}
+.install_send2plotter td:nth-child(2){
+	width:20%;
+	text-align:center;
+}
+.install_send2plotter td:nth-child(3){
+	width:30%;
+	text-align:center;	
+}
+.install_send2plotter td:nth-child(4){
+	width:30%;
+	text-align:center;	
+}
+.install_send2plotter tr:nth-child(even) {
+	background-color: #e6f2ff;
+}
+.install_send2plotter tr:nth-child(1){
+	font-weight:bold;
+	font-size:larger;
+    text-align:center;
+	background-color:#a3cbf5;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+}
+
+
+@media screen and (max-width: 1200px) {
+	.help_movie_flash{
+		height:calc(100vw * 0.58);
+	}
+}
+
+.update_history{
+	border-collapse: collapse;
+	width: 100%;
+	text-align:left;
+	font-size:16px;	
+	border: 1px;
+	border-style:solid;	
+}
+.update_history th{
+    text-align:left;
+	background-color:#e5f2ff;	/*Same as header background-color*/
+	font-size:18px;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	border: 1px;
+	border-style:solid;	
+}
+.update_history td{
+	border: 1px;
+	padding:5px;
+	border-style:dotted;
+	vertical-align:central;
+}
+.update_history td:nth-child(1){
+	width:10%;
+}
+
+/*Tab Content Display in HTML5+CSS*/
+
+.tabCanvas {
+    margin: 0 auto;
+    width: 100%;  /* Ancho del contenedor */
+	text-align:center; 
+}
+
+.tabCanvas input {
+	height:2.5em;
+	width:0;
+	visibility: hidden;
+	margin: 0px;
+	
+}
+
+.tabCanvas label {
+	font-size:18px;	/*same font-size with h2*/
+	font-weight:bold;	
+	cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;		
+	border-radius: .25em .25em .25em .25em;	
+	
+	height: 2.5em;
+	line-height: 2.5em;
+	margin-right: 0;
+	margin-left: 0;
+	
+	width: 49%;
+ 	padding: 0%;
+	text-align: center;
+	display:block;	
+	float: left;
+}
+
+.tabCanvas input:hover + label, .tabCanvas input:checked:hover + label {
+	background-color: #ddd;  
+}
+
+.tabCanvas input:checked + label {
+	background-color: #ccc;
+	position: relative;
+	z-index: 6;
+	/*
+	-webkit-transition: .1s;
+	-moz-transition: .1s;
+	-o-transition: .1s;
+	-ms-transition: .1s;
+	*/
+}
+
+#tabContent {	
+	min-height: 20em;  /* Alto del contenido */
+	position: relative;
+	width: 100%;
+	z-index: 5;
+	text-align: left;
+	
+}
+
+#tabContent article{
+	opacity: 0;
+	display: none;
+	padding: 0em;
+/*	position: absolute;*/
+	z-index: -100;
+	/*
+	transition: all linear 0.1s;
+	*/
+}
+
+.tabCanvas input#tab-1:checked ~ #tabContent article:nth-child(1),
+.tabCanvas input#tab-2:checked ~ #tabContent article:nth-child(2),
+.tabCanvas input#tab-3:checked ~ #tabContent article:nth-child(3){
+    opacity: 1;
+	display: block;
+    z-index: 19;
+}
+
+.tabCanvas input.visible {
+  visibility: visible !important;
+}

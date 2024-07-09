@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>::Training::</title> 
+<!-- TemplateEndEditable -->
+<!-- title will be updated by Javascript in bottom -->
+<link rel="icon" href="../img/Portal-Icon-2.ico"/>
+<link rel="stylesheet" type="text/css" href="../style/_main.css">
+<link rel="stylesheet" type="text/css" href="../style/training_theme.css">
+<!-- <script src="../js/tpis_loadTemplate.js"></script> -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body onLoad="loadCurrent_item()">
+<div class="container" id="container">
+    <div class="testing">
+        filename: <span id="filename"></span> , accordionItem~a-href:<span id="ahref"></span><br>
+        filters: <span id="searchwords"></span><br>
+        matched #myUL&gt;li: <span id="match_li"></span> <br> 
+        not matched #myUL&gt;li: <span id="notmatch_li"></span><br>
+        no.of "&lt;a&gt;&quot; tag: <span id="no_of_ahref"></span><br>
+        no.of  &quot;&lt;a&gt;&quot; tag with href: <span id="no_of_a"></span><br>
+        match_li length: <p id="match_li_check"></p><br>
+    </div>
+
+	<header>
+      <div id="topNav" class="topNav">
+        <a href="javascript:void(0);" class="icon" onclick="opentopNav()">&#9776;</a>
+        <a href="../index.html">Carto Portal</a>          
+        <a href="../CAD/index.html">CAD</a>      
+        <a href="../ArcGIS/index.html">ArcGIS</a>
+		<a href="../ArcGISPro/index.html">ArcGIS Pro</a>		  
+        <a href="../TPIS/index.html">TPIS</a>            
+		<a href="../QGIS/index.html">QGIS</a>
+		<a href="../FME/index.html">FME</a>
+        <a href="../ODPLP/index.html">ODP/LP</a>                      
+        <a href="../MAINTENANCE/index.html">Maintenance</a>            
+        <a href="../TRAINING/index.html" class="active">Training</a>      
+        <a href="../REFERENCE/index.html">Reference</a>          
+        <a href="../contact.html">Contact Us</a>
+        <a href="../about_portal.html">About Portal</a>                                           
+      </div>
+    </header>
+    
+    <div id="sideNavOpen"><a href="#" onclick="opensideNav()">Training</a></div>
+ 
+	<nav>
+    	<aside id="sideNav" class="sideNav">
+          <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closesideNav()">&times;</a>
+          <input type="text" id="myInput" onkeyup="accordionSearch()" placeholder="Search for topics...">
+          <ul id="myUL">
+       <!--Topic Title-->
+            <li class="accordion"><div class="caret"></div><a>What's new ?</a></li>
+            <ul class="panel">
+              <li><a class="accordionItem" href="../TRAINING/T0_UPDATE_HISTORY/update_history.html" target="_self">Update History</a></li>
+            </ul>
+			  
+		<!--Topic Title-->    
+              <li class="accordion"><div class="caret"></div><a>SMO Induction Course</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_ChowKwokChuen.html">Organisation Structure of SMO and eNomination / SMO Training Database </a></li>
+				   <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_LeungSauYue.html">Job Responsibility of TO in LandsD & Secondment Offices</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_ChiuPuiYan.html">General Practice in SMO</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_MI.html">Introduction of MI</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_PASS.html">Introduction of PASS</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_Mapping.html">Introduction of Mapping</a></li>
+				   <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_Repro.html">Introduction of Repro</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_AFCD.html">TO Duties in AFCD</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_Housing.html">TO Duties in Housing Department</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_RVD.html">TO Duties in RVD</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_Marine.html">TO Duties in Marine Department</a></li>
+				  <li><a class="accordionItem" href="../TRAINING/SMO_Induction_Video/SMO_Induction_Video_PlanD.html">TO Duties in PlanD</a></li>
+              
+              </ul>
+       <!--Topic Title-->    
+              <li class="accordion"><div class="caret"></div><a>CAD Training</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/T1_CAD_Training/T1_ODP.html">ODPLP Note</a></li>
+              </ul>
+			  
+		<!--Topic Title-->    
+              <li class="accordion"><div class="caret"></div><a>TPCS Training</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/T8_TPCS.html">TPCS Note</a></li>
+				  <li class="accordion"><div class="caret"></div><a>Demostration</a></li>
+				  <ul class="panel">
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Add_delete_Rings.html">Add/Delete Ring</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Advanced_Digitize_Panel.html">The Advanced Digitizing panel</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Basic_operations_LayoutView.html">Basic operations in layout view</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Lines_to_polygons.html">Polygonize</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Manage_Map_Theme.html">Map Themes Management in QGIS</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Polygon_to_Line.html">Polygons to lines</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Reshape_features.html">Reshape Feature</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Selection_By_Attributes_Problem.html">Selection by Attribute</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Split_and_Rotate.html">Spilt features</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Tracing_Features.html">Automatic Tracing</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T8_TPCS_Training/DEMO/Demo_QGIS_Trim_Extend.html">Trim and Extend</a></li>
+				  </ul>
+              </ul>
+			  
+		<!--Topic Title-->    
+              <li class="accordion"><div class="caret"></div><a>In-depth Understanding of QGIS</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/T2_In-depth_QGIS/IdQ_Materials.html">Exercise & Material</a></li>
+              </ul>
+			  
+              
+       	<!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>TPIS Training</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/tpis_training/powerpoint_slides.html">PowerPoint Slides</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/tpis_training/course_workbook.html">Exercise & Material</a></li>                              
+              </ul>
+       	<!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Geoprocessing & Topology</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/GP_Topology/gptopo_ppt_slides.html">Introduction</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/GP_Topology/gptopo_course_workbook.html">Exercise & Material</a></li>                              
+              </ul>              
+        <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Autodesk 3ds Max 2024</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/T_Autodesk_3ds_Max/3ds_Introduction.html">Notes & Material</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_Autodesk_3ds_Max/3ds_video.html">Demo Videos</a></li>
+              </ul>
+        <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Photomontage</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/T_Photomontage/PM_Introduction.html">Introduction</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_Photomontage/PM_Practical.html">Exercise & Material</a></li>
+              </ul>
+              
+
+              
+        <!--Topic Title-->
+             <li class="accordion"><div class="caret"></div><a>Image Processing (GIMP & Photoshop)</a></li>
+                  <ul class="panel">					  
+                  <li><a class="accordionItem" href="../TRAINING/T_Image_Processing_GIMP/IP_Introduction.html">Introduction</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_Image_Processing_GIMP/IP_Practical.html">Exercise & Material</a></li>                                             
+                  </ul>    
+			  
+		<!--Topic Title-->
+             <li class="accordion"><div class="caret"></div><a>Advanced Adobe Photoshop CC</a></li>
+                  <ul class="panel">					  
+                  <li><a class="accordionItem" href="../TRAINING/T_Advanced_Photoshop/AP_Course notes.html">Course Notes</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_Advanced_Photoshop/AP_Practical.html">Practical</a></li>                                             
+                  </ul>  
+                  			  
+       <!--Topic Title-->   
+	   <!--
+              <li class="accordion"><div class="caret"></div><a>QGIS</a></li>
+              <ul class="panel">
+				  <li><a class="accordionItem" href="../TRAINING/T_QGIS/QGIS_PlanProduction.html">Introduction of QGIS Plan Production</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_QGIS/QGIS_PlanProPractical.html">Exercise & Material for QGIS Plan Production</a></li>
+				  <li class="accordion"><div class="caret"></div><a>Demostration</a></li>
+				  <ul class="panel">
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Add_delete_Rings.html">Add/Delete Ring</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Advanced_Digitize_Panel.html">The Advanced Digitizing panel</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Basic_operations_LayoutView.html">Basic operations in layout view</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Lines_to_polygons.html">Polygonize</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Manage_Map_Theme.html">Map Themes Management in QGIS</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Polygon_to_Line.html">Polygons to lines</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Reshape_features.html">Reshape Feature</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Selection_By_Attributes_Problem.html">Selection by Attribute</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Split_and_Rotate.html">Spilt features</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Tracing_Features.html">Automatic Tracing</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/T_QGIS/DEMO/Demo_QGIS_Trim_Extend.html">Trim and Extend</a></li>
+				  </ul>
+              </ul>
+		-->
+			  
+		<!--Topic Title-->
+             <li class="accordion"><div class="caret"></div><a>ArcGIS Pro Training</a></li>
+                  <ul class="panel">		  
+                  <li><a class="accordionItem" href="../TRAINING/T_ArcGISPro_Training/AGP_Introduction.html">Introduction</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_ArcGISPro_Training/AGP_Practical.html">Exercise & Material</a></li>
+
+				 </ul>
+		<!--Topic Title-->
+			 <li class="accordion"><div class="caret"></div><a>Briefing on the rCPDH</a></li>
+				<ul class="panel">
+					<li><a class="accordionItem" href="../TRAINING/T_Briefing_on_the_rCPDH/i_PowerPoint_Slides.html">PowerPoint Slides</a></li>
+					<li><a class="accordionItem" href="../TRAINING/T_Briefing_on_the_rCPDH/ii_Training_by_Contractor.html">Training by Contractor</a></li>
+					<li><a class="accordionItem" href="../TRAINING/T_Briefing_on_the_rCPDH/iii_Materials_from_Contractor.html">Materials from Contractor</a></li>
+             	</ul>
+		<!--Topic Title-->
+			 <li class="accordion"><div class="caret"></div><a>Briefing on the rTPIS</a></li>
+				<ul class="panel">
+					<li><a class="accordionItem" href="../TRAINING/T_Briefing_on_the_rTPIS/i_PowerPoint_Slides_rTpis.html">PowerPoint Slides</a></li>				
+             	</ul>
+			  
+        <!--Topic Title-->           
+              <li class="accordion"><div class="caret"></div><a>PDF-XChange Editor</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/T_PDFXChange/PDFX_Introduction.html">PDF-XChange Introduction</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_PDFXChange/expanded_gist.html">Expanded GIST</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_PDFXChange/Making_OZP_Note.html">Making OZP Note</a></li>                  
+                  <!-- <li><a class="accordionItem" href="\\pld-rcpdhdb\RTPIS_SHARE\Training\Online OZP Notes\Demo 1" target="_blank">Video Demo for OZP Notes</a></li>  --> 
+              </ul>
+              
+        <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Image Composite Editor</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/T_ICE/ICE_Introduction.html">Introduction</a></li>
+                  <li><a class="accordionItem" href="../TRAINING/T_ICE/ICE_Practical.html">Exercise & Material</a></li> 
+              </ul>    
+
+        <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Adobe Illustrator</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TRAINING/Adobe_Illustrator/ai_course_workbook.html">Course Workbook & Exercise</a></li> 
+              </ul>    
+                  			  
+			  
+         <!--Topic Title-->                                  
+               <li class="accordion"><div class="caret"></div><a>Seminar</a></li>                        
+                  <ul class="panel">
+                      <li><a class="accordionItem" href="../TRAINING/Seminar/Seminar_Etoken.html">Briefing Session of using LANCrypt (2017)</a></li>
+                      <li><a class="accordionItem" href="../TRAINING/Seminar/Seminar_ODPLP.html">Experience Sharing on Departmental Plans (2017)</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/Seminar/Seminar_OpenData_StatutoryPlan.html">Open Data for Statutory Plans (2019)</a></li>
+                      <li><a class="accordionItem" href="../TRAINING/Seminar/Seminar_Using_AMS.html">Tips in using Asset Management System(AMS) (2019)</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/Seminar/Seminar_PrepAppPlan.html">Experience Sharing on Preparation of Planning Application Plans (2021)</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/Seminar/Seminar_ExperienceSharing_2022.html">Experience Sharing on Cartographic Work in Non-DPO Sections (2022)</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/Seminar/Seminar_Departmental_Plan_Migration.html">Briefing on Departmental Plan Migration (2023)</a></li>
+					  <li><a class="accordionItem" href="../TRAINING/Seminar/Seminar_ExperienceSharing_2023.html">Experience Sharing for Cartographic Staff (2023)</a></li>
+                  </ul>
+		
+			  
+		 <!--Topic Title-->                                  
+               <li class="accordion"><div class="caret"></div><a>Evaluation</a></li>                        
+                  <ul class="panel">
+                      <li><a class="accordionItem" href="../TRAINING/T_Evaluation/evaluation_form.html">e-Evaluation Form</a></li>
+                  </ul>
+			  
+			  
+        <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>PlanD Training and Development</a></li>
+			  <ul class="panel">
+			  		  <li><a class="accordionItem" href="../TRAINING/T_Pland_T_and_D/T_Pland_T_and_D.html">Training Programmes</a></li>
+			  </ul>		
+	    <!--Topic Title-->
+              <li class="accordion"><div class="caret"></div><a>Access SMO Portal via VDI</a></li>
+			  <ul class="panel">
+			  		  <li><a class="accordionItem" href="../TRAINING/T_AccessSMOportal/Access_SMO_Portal_via_VDI.html">Procedures</a></li>
+				  	  <li><a class="accordionItem" href="../TRAINING/T_AccessSMOportal/Access_SMO_Portal_via_VDI_Help.html">When switching phones</a></li>
+			  </ul>
+			  
+          </ul>
+        </aside>
+	</nav>
+         
+    <main>
+        <div class="lastupdateddate">Last Modified: <!-- TemplateBeginEditable name="last_modified" -->27 May, 2024<!-- TemplateEndEditable --></div>
+        <!-- TemplateBeginEditable name="main_content" -->
+        <h1>Page Title</h1>
+        <article>
+          <section>
+          This is the main content area. You can paste your content in here.
+          </section>
+        </article>
+        <!-- TemplateEndEditable -->
+    </main>    
+    <footer> </footer> <!--Set in Main CSS-->
+</div>
+<button onclick="backtoTop()" id="btnbackTOP" title="Go to top">Top</button>
+<script src="../js/responisive_web.js"></script>
+<script>
+	document.getElementsByTagName("title")[0].innerHTML = "::Training:: " + document.getElementsByTagName("h1")[0].innerHTML
+</script>
+<script src="../js/vertical_accordion_menu.js"></script>
+<script src="../js/backtoTop.js"></script>
+
+</body>
+</html>

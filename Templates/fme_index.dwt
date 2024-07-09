@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>::QGIS Help::</title> 
+<!-- TemplateEndEditable -->
+<!-- title will be updated by Javascript in bottom -->
+<link rel="icon" href="../img/Portal-Icon-2.ico"/> 
+<link rel="stylesheet" type="text/css" href="../style/_main.css">
+<link rel="stylesheet" type="text/css" href="../style/fme_theme.css">
+<!-- <script src="../js/tpis_loadTemplate.js"></script> -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+
+</head>
+
+
+	
+<body onLoad="loadCurrent_item()">
+<div class="container" id="container">
+    <div class="testing">
+        filename: <span id="filename"></span> , accordionItem~a-href:<span id="ahref"></span><br>
+        filters: <span id="searchwords"></span><br>
+        matched #myUL&gt;li: <span id="match_li"></span> <br> 
+        not matched #myUL&gt;li: <span id="notmatch_li"></span><br>
+        no.of "&lt;a&gt;&quot; tag: <span id="no_of_ahref"></span><br>
+        no.of  &quot;&lt;a&gt;&quot; tag with href: <span id="no_of_a"></span><br>
+        match_li length: <p id="match_li_check"></p><br>
+    </div>
+
+	<header>
+      <div id="topNav" class="topNav">
+        <a href="javascript:void(0);" class="icon" onclick="opentopNav()">&#9776;</a>
+        <a href="../index.html">Carto Portal</a>          
+        <a href="../CAD/index.html">CAD</a>      
+	    <a href="../ArcGIS/index.html">ArcGIS</a>
+		<a href="../ArcGISPro/index.html">ArcGIS Pro</a>		  
+        <a href="../TPIS/index.html">TPIS</a>            
+		<a href="../QGIS/index.html">QGIS</a>
+		<a href="../FME/index.html" class="active">FME</a>
+        <a href="../ODPLP/index.html">ODP/LP</a>                      
+        <a href="../MAINTENANCE/index.html">Maintenance</a>            
+        <a href="../TRAINING/index.html">Training</a>      
+        <a href="../REFERENCE/index.html">Reference</a>          
+        <a href="../contact.html">Contact Us</a>     
+        <a href="../about_portal.html">About Portal</a>                                     
+      </div>
+    </header>
+    
+    <div id="sideNavOpen"><a href="#" onclick="opensideNav()">FME</a></div>
+ 
+	<nav>
+    	<aside id="sideNav" class="sideNav">
+          <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closesideNav()">&times;</a>
+          <input type="text" id="myInput" onkeyup="accordionSearch()" placeholder="Search for topics...">
+          <ul id="myUL">
+              <li class="accordion"><div class="caret"></div><a>What's new ?</a></li>
+                <ul class="panel">
+	              <li><a class="accordionItem" href="../FME/Latest_Update/update_history.html" arget="_self">Update History</a></li>              
+                </ul>
+
+              <li class="accordion"><div class="caret"></div><a>Get Started</a></li>
+                <ul class="panel">					
+                  <li><a class="accordionItem" href="../FME/00_Get_Started/Why_FME.html">Introduction to FME</a></li>
+				  <li><a class="accordionItem" href="../FME/00_Get_Started/Transformer.html">Transformer</a></li>
+				  <li><a class="accordionItem" href="../FME/00_Get_Started/Transformer_gallery.html">FME Transformer Gallery </a></li>
+				  <li><a class="accordionItem" href="../FME/00_Get_Started/Support_format.html">Supported Applications & Formats</a></li>
+				  <li><a class="accordionItem" href="../FME/00_Get_Started/Keyboard_Shortcuts.html">Keyboard Shortcuts </a></li>
+                </ul>
+			  
+              <li class="accordion"><div class="caret"></div><a>Training Material</a></li>
+                <ul class="panel">					
+                  <li><a class="accordionItem" href="../FME/Training_material/Seminar_SpatialDataConverions_FME.html">Briefing Sessions on Spatial Data Conversion using FME</a></li>	
+                </ul>
+			  
+			  <li class="accordion"><div class="caret"></div><a>Data Conversion</a></li>
+                <ul class="panel">								
+                  <li><a class="accordionItem" href="../FME/Data_conversion/dwg.html">CAD Drawing (DWG)</a></li>	
+                  <li><a class="accordionItem" href="../FME/Data_conversion/ecw.html">Enhanced Compression Wavelet (ECW)</a></li>
+				  <li><a class="accordionItem" href="../FME/Data_conversion/gpkg_gdb.html">Geopackage (GPKG)/ Geodatabase (GDB)</a></li>
+				  <li><a class="accordionItem" href="../FME/Data_conversion/odplp.html">Outline Development Plan & Layout Plan (ODPLP)</a></li>   
+                </ul> 
+          </ul>
+        </aside>
+    </nav>
+    
+    <main>
+		<script type="text/JavaScript" language="JavaScript">
+			<!-- 
+			//
+			// format date as dd-mmm-yy
+			// example: 12-Jan-99
+			//
+			function date_ddmmmyy(date)
+			{
+			var d = date.getDate();
+			var m = date.getMonth() + 1;
+			var y = date.getYear();
+
+  			// handle different year values 
+			// returned by IE and NS in 
+			// the year 2000.
+			if(y >= 2000)
+  			{
+	  		y -= 2000;
+  			}
+			if(y >= 100)
+  			{
+	  			y -= 100;
+  			}
+
+			// could use splitString() here 
+			// but the following method is 
+			// more compatible
+  			var mmm = 
+    		( 1==m)?'January':( 2==m)?'February':(3==m)?'March':
+    		( 4==m)?'April':( 5==m)?'May':(6==m)?'June':
+    		( 7==m)?'July':( 8==m)?'August':(9==m)?'September':
+    		(10==m)?'October':(11==m)?'November':'December';
+
+  			return "" +
+    		(d<10?"0"+d:d) + " " + mmm + ", 20" + y;
+			}
+			//
+			// get last modified date of the 
+			// current document.
+			function date_lastmodified()
+			{
+  			var lmd = document.lastModified;
+  			var s   = "Unknown";
+  			var d1;
+
+			// check if we have a valid date
+  			// before proceeding
+  			if(0 != (d1=Date.parse(lmd)))
+ 			{
+    		s = "" + date_ddmmmyy(new Date(d1));
+  			}
+
+  			return s;
+			}
+		</script>
+        <div class="lastupdateddate">Last Modified: <!-- TemplateBeginEditable name="last_modified" --><script>document.write( date_lastmodified() );</script><!-- TemplateEndEditable --></div>
+        <!-- TemplateBeginEditable name="main_content" -->
+        <h1>Comming Soon</h1>
+        <article>
+          <section>
+			<img src="../img/comingsoon.png" width="700" height="300" alt=""/>
+          </section>
+        </article>
+        <!-- TemplateEndEditable -->
+    </main>    
+	<footer></footer>
+</div>
+<button class="btnbackTOP" onclick="backtoTop()" id="btnbackTOP" title="Go to top">Top</button>
+<script src="../js/responisive_web.js"></script>
+<script>
+	document.getElementsByTagName("title")[0].innerHTML = "::QGIS:: " + document.getElementsByTagName("h1")[0].innerHTML
+</script>
+<script src="../js/vertical_accordion_menu.js"></script>
+<script src="../js/backtoTop.js"></script>
+
+</body>
+</html>

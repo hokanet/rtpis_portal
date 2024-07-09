@@ -1,0 +1,142 @@
+    <ul id="myUL">
+        <li class="accordion"><a href="../01_Whats_new_in_TPIS/whats_news.html" target="content">What's New in TPIS</a></li>
+        <ul class="panel">
+        </ul>
+        <li class="accordion"><a>Getting Started</a></li>
+        <ul class="panel">
+            <li><a href="../02_Getting_started/get_start1.html" target="content">What is TPIS</a></li>
+            <li><a href="../02_Getting_started/get_start2.html" target="content">Types of Plans</a></li>
+            <li><a>Data</a></li>
+            <li><a>Work Flow</a></li>
+            <li><a>Data Structure</a></li>
+            <li><a>Attribute tables for TPIS</a></li>
+            <li><a>Open TPIS document</a></li>            
+        </ul>
+        <li class="accordion"><a>Editing in TPIS</a></li>
+        <ul class="panel">
+            <li class="accordion"><a>General Setting</a></li>
+            <ul class="panel">
+              <li><a>Editing Environment</a></li>
+              <li><a>Snapping Environment</a></li>
+            </ul>            
+            <li class="accordion"><a>General Technique</a></li>
+            <ul class="panel">
+              <li><a>Selecting Feature</a></li>
+              <li><a>Activate Layers</a></li>
+              <li><a>Editor Toolbar</a></li>
+              <li><a>Editing Polygon Feature</a></li>
+              <li><a>Editing Point Feature</a></li>
+              <li><a>Editing Line Feature</a></li>
+              <li><a>Editing Attribute</a></li>
+              <li><a>Editing Annotation</a></li>                                                        
+            </ul>              
+            <li class="accordion"><a>Edit TPIS Layers</a></li>
+            <ul class="panel">
+              <li><a>DPO</a></li>
+              <li><a>OZP_PLAN</a></li>
+              <li><a>OZP_SCHM_LINE</a></li>
+              <li><a>OZP_ZONE</a></li>               
+              <li><a>OZP_ZONE_LINE</a></li>
+              <li><a>OZP_AMEND / OZP_AMEND_S6X</a></li>
+              <li><a>BHC_ZONE</a></li>
+              <li><a>BHC_PT</a></li>
+              <li><a>BHC_LINE</a></li>
+              <li><a>FEAT_LINE</a></li>
+              <li><a>FEAT_POLY</a></li>               
+              <li><a>FEAT_PT</a></li>
+              <li><a>PT_DESC</a></li>
+              <li><a>FEAT_ANNO</a></li>
+            </ul>
+            <li><a>Advanced Editing Toolbar</a></li>
+            <li><a>TPIS Toolbar</a></li>            
+            <li><a>Resize Annotation</a></li>
+            <li><a>Delete redundant records</a></li>
+            <li><a>Update OZP Attributes</a></li>
+            <li><a>Update Road Polygon (MRDJ)</a></li>
+        </ul>
+        <li class="accordion"><a>Preparing OZP</a></li>
+        <ul class="panel">
+            <li><a>Add BMS Layers</a></li>
+            <li><a>Add Legend</a></li>
+            <li><a>Add Legend</a></li>
+            <li><a>Add Amendment Box</a></li>            
+            <li><a>Add Signature Box</a></li>
+            <li><a>Add Attachment Statement</a></li>
+            <li><a>Add Certified True Copy Stamp</a></li>
+            <li><a>Add Logo</a></li>
+            <li><a>Add North Arrow</a></li>
+            <li><a>Add Title</a></li>
+            <li><a>Add / Remove Map Grid layer</a></li>
+            <li class="accordion"><a>Apply Symbology</a></li>
+            <ul class="panel">
+              <li><a>Zoom to Standard Scale</a></li>
+              <li><a>Apply Style</a></li>
+            </ul>
+            <li class="accordion"><a>Generate Hardcopy/ Export image</a></li>
+            <ul class="panel">
+              <li><a>Print in Full Size</a></li>
+              <li><a>Print in A3 Size</a></li>
+              <li><a>Create Plot File</a></li>
+              <li><a>Export to Raster Image</a></li>
+            </ul>                     
+        </ul>
+        <li class="accordion"><a>Preparing Amendment Plan</a></li>
+        <ul class="panel">
+            <li><a>Proposed/Confirmed Amendment Plan Template</a></li>
+            <li><a>Handle Check-Out Data</a></li>
+            <li><a>Edit Key Plan</a></li>
+            <li><a>Preparation for printing</a></li>
+            <li class="accordion"><a>Add Map Elements on Proposed/Confirmed Amendment Plan Layout</a></li>
+            <ul class="panel">
+              <li><a>Update Format</a></li>
+              <li><a>Add Legend</a></li>
+              <li><a>Add Signer</a></li>
+              <li><a>Show / Remove Map Grid</a></li>
+              <li><a>Apply Style</a></li>
+              <li><a>Zoom to Standard Scale</a></li>                 
+            </ul>
+        </ul>      
+        <li class="accordion"><a>Preparing Multi-Plan</a></li>
+        <ul class="panel">
+            <li><a>Multi-Plan Template</a></li>
+            <li><a>Add Multi-Plan Legend</a></li>
+            <li><a>Add Preparation Date</a></li>
+            <li><a>Add Logo</a></li>
+            <li><a>Add North Arrow</a></li>
+            <li><a>Add Title</a></li>
+            <li><a>Add Plan No.</a></li>
+            <li><a>Add / Remove Map Grid</a></li>
+        </ul>                
+
+        <li class="accordion"><a>Checking TPIS Data</a></li>
+        <ul class="panel">
+            <li><a>Run Checker files</a></li>
+            <li><a>Export Summary Report</a></li>
+            <li><a>Create Area Check Plot</a></li>
+            <li><a>Check List before Check-in</a>
+        </ul>   
+
+        <li class="accordion"><a>Symbols used in TPIS</a></li>
+        <ul class="panel">
+            <li><a>Colour Table for HPT7100PS Plotter</a></li>
+            <li><a>Fill symbols for OZP_AMEND and OZP_AMEND_S6X</a></li>
+            <li><a>Fill symbols for FEAT_POLY</a></li>
+            <li><a>Line symbols for FEAT_LINE and OZP_ZONE_LINE</a></li>
+            <li><a>Point symbols for FEAT_PT and BHC_PT</a></li>
+        </ul>
+        
+        <li class="accordion"><a>Data Management</a></li>
+        <ul class="panel">
+            <li><a>Convert to CAD format</a></li>
+            <li><a>Convert to Shapefile format</a></li>            
+        </ul>
+        
+        <li class="accordion"><a>Useful Operation / Information</a></li>
+        <ul class="panel">
+            <li><a>Georeferencing a TIFF image</a></li>
+            <li><a>"OU" zone description</a></li>
+            <li><a>List of Plan Size</a></li>
+            <li><a>Training Materials</a></li>
+            <li><a>TPIS Cartographic Specification</a></li>
+        </ul>                        
+    </ul>   

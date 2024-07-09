@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media print{
+  
+	@page{
+    size: A4 portrait;
+    
+	margin-top: 2cm;
+	margin-bottom: 2cm;
+	margin-right: 1cm;
+	margin-left: 1cm;
+		
+    orphans:4;
+    widows:2;
+  }	
+	
+  body{
+   background: #fff;
+  }
+  nav{
+    float: none;
+    width: 0;
+  }	
+  #container, main, article, section{
+      width:19cm;  /*Paper Width - MarginLeft & MarginRight*/
+  }	
+  #container{
+    margin-left:0cm;
+    margin-right:0cm;
+  }
+  main{
+    float:none;
+    display: block;
+  }
+  h1{
+      align-content: center;
+      text-align: center;
+	}
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after:avoid;
+    page-break-inside:avoid
+  }
+  h1+p, h2+p, h3+p {
+    page-break-before: avoid;
+  }
+  a {
+    page-break-inside:avoid
+  }
+  img{
+    page-break-after: avoid;
+    page-break-inside: avoid;
+	  max-width: 5cm;
+	  	height: auto;
+  }
+  table, blockquote{
+    page-break-inside: avoid;
+  }
+  ul, ol, dl {
+    page-break-before:avoid;
+  }
+  .acc_content{
+      display: block;      
+  }
+  details{
+	outline-width:0px;
+	
+ }	
+/* Items not to Print */	
+  header, nav, footer, video, audio, object, embed, hr {
+    display: none;
+  }	
+  .help_movie, .btnbackTOP{
+		display: none;
+	}
+	
+}
+

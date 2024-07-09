@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+/*Accordion Content*/
+
+.acc_content_header {
+	width:100%;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 1%;
+    border: none;
+    text-align:center;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+	font-weight:bold;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.acc_content_header.active, .acc_content_header:hover {
+    background-color: #ccc;
+}
+
+.acc_content_header:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.acc_content_header.active:after {
+    content: "\2212";
+}
+
+.acc_content {
+    padding: 0 0px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/*Custom style for types of plans*/
+article.types_of_plans section{
+	text-align:center;
+	outline-style:solid;
+	outline-color:black;
+	outline-width:1px;
+	margin-bottom:10px;
+}
+article.types_of_plans table{
+	width:100%;
+	text-align:center;
+	vertical-align:middle;	
+}
+article.types_of_plans .acc_content_header{
+	text-align:left; /*override default class setting*/
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+	float:none;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+	text-align:center;
+	width:100%;	
+	padding:0px;
+	font-size:18px;
+}
+
+/* Style the buttons inside the tab */
+.tab_links {
+	font-size:16px;	/*same font-size with h2*/
+	font-weight:bold;
+	width:50%;
+    padding: 1%;
+    float: left;		
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+
+}
+
+/* Change background color of buttons on hover */
+.tab_links:hover {
+    background-color: #ddd;
+}
+/* Create an active/current tablink class */
+.tab_links.active {
+    background-color: #ccc;
+}
+
+.tab_content{
+/*    display: none;*/
+}
+/*Custom style for workflow for ozp*/
+#workflow_of_ozp img,#workflow_of_s6x img{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;	
+}
+#workflow_of_ozp section,#workflow_of_s6x section{
+	outline-width:1px;
+	outline-color:black;
+	outline-style:solid;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;	
+}
+#workflow_of_ozp ul,#workflow_of_s6x ul{
+	text-align:left;
+}*
+/*
+article.workflow_of_ozp img{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+article.workflow_of_ozp section{
+	outline-width:1px;
+	outline-color:black;
+	outline-style:solid;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+}
+article.workflow_of_ozp ul{
+	text-align:left;
+}*/

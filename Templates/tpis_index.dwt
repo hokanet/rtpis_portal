@@ -1,0 +1,468 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>::TPIS Help::</title> 
+<!-- TemplateEndEditable -->
+<!-- title will be updated by Javascript in bottom -->
+<link rel="icon" href="../img/Portal-Icon-2.ico"/>
+<link rel="stylesheet" type="text/css" href="../style/_main.css">
+<link rel="stylesheet" type="text/css" href="../style/tpis_theme.css">
+<link rel="stylesheet" type="text/css" href="../style/printA4.css" media="print">
+<!-- <script src="../js/tpis_loadTemplate.js"></script> -->
+<!-- TemplateBeginEditable name="head" -->
+	
+<!-- TemplateEndEditable -->
+</head>
+
+<body onLoad="loadCurrent_item()">
+<div class="container" id="container">
+    <div class="testing">
+        filename: <span id="filename"></span> , accordionItem~a-href:<span id="ahref"></span><br>
+        filters: <span id="searchwords"></span><br>
+        matched #myUL&gt;li: <span id="match_li"></span> <br> 
+        not matched #myUL&gt;li: <span id="notmatch_li"></span><br>
+        no.of "&lt;a&gt;&quot; tag: <span id="no_of_ahref"></span><br>
+        no.of  &quot;&lt;a&gt;&quot; tag with href: <span id="no_of_a"></span><br>
+        match_li length: <p id="match_li_check"></p><br>
+    </div>
+
+	<header>
+      <div id="topNav" class="topNav">
+        <a href="javascript:void(0);" class="icon" onclick="opentopNav()">&#9776;</a>
+        <a href="../index.html">Carto Portal</a>          
+        <a href="../CAD/index.html">CAD</a>      
+        <a href="../ArcGIS/index.html">ArcGIS</a>
+		<a href="../ArcGISPro/index.html">ArcGIS Pro</a>		  
+        <a href="../TPIS/index.html" class="active">TPIS</a>            
+        <a href="../QGIS/index.html">QGIS</a>
+		<a href="../FME/index.html">FME</a>
+		<a href="../ODPLP/index.html">ODP/LP</a>                      
+        <a href="../MAINTENANCE/index.html">Maintenance</a>            
+        <a href="../TRAINING/index.html">Training</a>      
+        <a href="../REFERENCE/index.html">Reference</a>          
+        <a href="../contact.html">Contact Us</a>            
+        <a href="../about_portal.html">About Portal</a>                                                   
+      </div>
+    </header>
+    
+    <div id="sideNavOpen"><a href="#" onclick="opensideNav()">TPIS</a></div>
+ 
+	<nav>
+    	<aside id="sideNav" class="sideNav">
+          <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closesideNav()">&times;</a>
+          <input type="text" id="myInput" onkeyup="accordionSearch()" placeholder="Search for topics...">
+          <ul id="myUL">
+              <li class="accordion"><div class="caret"></div><a>What's new ?</a></li>
+              <ul class="panel">
+                <li><a class="accordionItem" href="../TPIS/01_Whats_new_in_TPIS/update_history.html" target="_self">Update History</a></li>
+              </ul>
+              <!--<ul class="panel">
+              </ul>-->
+              <li class="accordion"><div class="caret"></div><a>Get Started</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TPIS/02_Getting_started/what_is_tpis.html">What is TPIS?</a></li>
+                  <li><a class="accordionItem" href="../TPIS/02_Getting_started/types_of_tpis_plan.html">Types of TPIS Plans</a></li>
+                  <li><a class="accordionItem" href="../TPIS/02_Getting_started/workflow_tpis.html">Work Flow</a></li>
+<!--              <li><a class="accordionItem" href="../TPIS/02_Getting_started/data_protection.html">Data Protection</a></li> -->
+              </ul>
+			  
+			  <li class="accordion"><div class="caret"></div><a>TPIS Program</a></li>
+              <ul class="panel">
+
+				  <li class="accordion"><div class="caret"></div><a>TPIS Menu and Tools</a></li>
+                  <ul class="panel">
+				  	<li><a class="accordionItem" href="../TPIS/02_Getting_started/tpis_menu_tools_ozp.html">Menu and Tools for OZP</a></li>
+                    <li><a class="accordionItem" href="../TPIS/02_Getting_started/tpis_menu_tools_6X.html">Menu and Tools for Amendment Plan</a></li>
+					<li><a class="accordionItem" href="../TPIS/02_Getting_started/tpis_menu_tools_multiplan.html">Menu and Tools for Multi-Plan</a></li>     
+                  </ul>				  
+				  
+				  <li class="accordion"><div class="caret"></div><a>Start TPIS</a></li>
+                  <ul class="panel">
+					<li><a class="accordionItem" href="../TPIS/02_Getting_started/active_tpis_toolbar.html">Activate TPIS Toolbar</a></li>
+                    <li><a class="accordionItem" href="../TPIS/02_Getting_started/ozp_start-up_template.html">OZP Start-up Template</a></li>
+                    <li><a class="accordionItem" href="../TPIS/02_Getting_started/amendment_plan_start-up_template.html">Amendment Plan Start-up Template</a></li>
+                    <li><a class="accordionItem" href="../TPIS/02_Getting_started/multi-plan_start-up_template.html">Multi-Plan Start-up Template</a></li>         
+                  </ul>
+
+				  <li class="accordion"><div class="caret"></div><a>Data Extraction</a></li>
+                  <ul class="panel">
+					  <li><a class="accordionItem" href="../TPIS/02_Getting_started/extract_tpis_data.html">Extract TPIS Data</a></li>
+					  <li><a class="accordionItem" href="../TPIS/02_Getting_started/extract_bms_data.html">Extract BMS Data</a></li>    
+                  </ul>				  				  
+              </ul>					  
+			  
+              <li class="accordion"><div class="caret"></div><a>TPIS Data</a></li>
+              <ul class="panel">           
+                  <li class="accordion"><div class="caret"></div><a>Model and Structure</a></li>
+                  <ul class="panel">
+					<li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/system_architecture.html">System Architecture</a></li>          
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/data_model.html">Data Model</a></li>              
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/data_structure.html">Data Structure</a></li>
+					<li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/data_layers.html">Data Layers</a></li>                    
+                  </ul>
+
+                  <li class="accordion"><div class="caret"></div><a>Feature Class Schema</a></li>
+                  <ul class="panel">
+
+                    <!--Scheme Boundary and Area-->
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_plan.html">OZP_PLAN</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_schm_line.html">OZP_SCHM_LINE</a></li>
+
+                    <!--Amendment to Land Uses Zone Data-->
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_zone.html">OZP_ZONE</a></li>               
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_zone_label.html">OZP_ZONE_LABEL</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_zone_use_eng.html">OZP_ZONE_USE_ENG</a></li>                    
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_zone_use_cht.html">OZP_ZONE_USE_CHT</a></li>                                        
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_zone_line.html">OZP_ZONE_LINE</a></li>
+                    
+                    <!--Amendment to Statutory Plan-->
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_amend.html">OZP_AMEND</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_amend_label.html">OZP_AMEND_LABEL</a></li>                    
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_amend_s6x.html">OZP_AMEND_S6X</a></li>                                        
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/ozp_amend_label_s6x.html">OZP_AMEND_LABEL_S6X</a></li>                                        
+                                        
+                    <!--Building Height Control Data-->
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/bhc_zone.html">BHC_ZONE</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/bhc_pt.html">BHC_PT</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/bhc_label.html">BHC_LABEL</a></li>                                        
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/bhc_line.html">BHC_LINE</a></li>
+
+                    <!--Planning Information Data-->
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/pt_desc.html">PT_DESC</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/pt_desc_label_eng.html">PT_DESC_ANNO_ENG</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/pt_desc_label_cht.html">PT_DESC_ANNO_CHT</a></li>
+                    
+
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/dpo.html">DPO</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/feat_poly.html">FEAT_POLY</a></li>               
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/feat_line.html">FEAT_LINE</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/feat_pt.html">FEAT_PT</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/feat_anno.html">FEAT_ANNO</a></li>                    
+
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/temp_line.html">TEMP_LINE</a></li>
+                    <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/Data_Schema/temp_zone.html">TEMP_ZONE</a></li> 
+
+                  </ul>
+				  
+				 <li><a class="accordionItem" href="../TPIS/03_Data_in_TPIS/share_tpisdata.html">Share of TPIS Data</a></li>  
+              </ul>              
+			  
+	  
+			  
+
+              
+              <li class="accordion"><div class="caret"></div><a>Edit in TPIS</a></li>
+              <ul class="panel">
+              
+                  <li class="accordion"><div class="caret"></div><a>Land Use Zone</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/present_ozp_zone.html">Presentation of Land Uses</a></li>					  
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/modify_ozp_zone.html">Modify OZP Zone Polygon (OZP_ZONE)</a></li>
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_ozp_zone_label.html">Edit OZP Zone Related Label (OZP_ZONE_LABEL/OZP_ZONE_USE_*)</a></li>                     
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_ozp_zone_line.html">Edit OZP Zone Line (OZP_ZONE_LINE)</a></li>                              
+                  </ul> 
+                                
+                  <li class="accordion"><div class="caret"></div><a>Amendment to Statutory Plan</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/create_ozp_amend.html">Create OZP Amendment Polygon (OZP_AMEND)</a></li>
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_ozp_amend_label.html">Edit OZP Amendment Label (OZP_AMEND_LABEL)</a></li>                                      
+                  </ul> 
+
+                  <li class="accordion"><div class="caret"></div><a>S6X Amendment</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/create_ozp_amend_s6x.html">Create S6X Amendment Polygon (OZP_AMEND_S6X)</a></li>
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_ozp_amend_label_s6x.html">Edit S6X Amendment Label (OZP_AMEND_LABEL_S6X)</a></li>                                      
+                  </ul> 
+
+                  <li class="accordion"><div class="caret"></div><a>Building Height Control Data</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/present_bhc_zone.html">Present of BHC</a></li>					  
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/create_bhc_zone.html">Create BHC/NBA Zone Polygon(BHC_ZONE)</a></li>
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/modify_bhc_line.html">Modify BHC Line (BHC_LINE)</a></li>
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_bhc_pt.html">Edit BHC Point (BHC_PT)</a></li>                    
+                  </ul>
+
+                  <li class="accordion"><div class="caret"></div><a>Planning Information</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_pt_desc.html">Edit Point Description (PT_DESC)</a></li>
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_pt_desc_anno.html">Place Descrioption Annotation (PT_DESC_ANNO_*)</a></li>                    
+                  </ul>
+
+                  <li class="accordion"><div class="caret"></div><a>Scheme Boundary and Area</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/update_ozp_plan.html">Update OZP Plan Polygon (OZP_PLAN)</a></li>
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/modify_ozp_schm_line.html">Modify Planning Scheme Line (OZP_SCHM_LINE)</a></li>                               
+                  </ul>
+ 
+                  <li class="accordion"><div class="caret"></div><a>Proposed / Exisiting Features</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/create_feat_poly.html">Create Feature Polygon (FEAT_POLY)</a></li>                                    
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_feat_line.html">Edit Feature Line (FEAT_LINE)</a></li>                               
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_feat_pt.html">Edit Feature Point (FEAT_PT)</a></li>
+                    <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/edit_feat_anno.html">Edit Feature Annotation (FEAT_ANNO)</a></li>                  
+                  </ul>
+                                                                                    
+<!--              <li><a class="accordionItem" href="../TPIS/02_Getting_started/tpis_toolbar.html">TPIS Toolbar</a></li>-->
+                  <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/text_mask_update.html">Text Mask Update</a></li>                  
+                  <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/draw_arrow_line.html">Draw Arrow or Line</a></li>                  
+                  <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/draw_brace.html">Draw Brace</a></li>                                                      
+                  <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/resize_annotation.html">Resize Annotation</a></li>
+                  <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/update_ozp_attribute.html">Update OZP Attributes</a></li>
+				  <li><a class="accordionItem" href="../TPIS/04_Edit_in_TPIS/contour_line_setting.html">Contour Line Setting</a></li>
+
+              </ul>
+
+              <li class="accordion"><div class="caret"></div><a>Check TPIS Data</a></li>
+              <ul class="panel">
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/data_verification_tool.html">Data Verification Tool</a></li>
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/create_road_polygon.html">Create ROAD Polygon</a></li>
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/changes_checker_tool.html">Changes Checker Tool</a></li>
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/delete_redundant_records.html">Delete Redundant Records</a></li>                  
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/re-update_ozp_attributes.html">Re-update OZP Attributes</a></li>
+				  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/routine_topology_check.html">Routine Topology Check</a></li>
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/export_summary_report.html">Export Summary Report</a></li>
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/create_area_check_plot.html">Create Area Check Plot</a></li>
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/tpis_checker_tools.html">TPIS Checker Tools</a></li>
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/attribute_checker.html">Attributes Checker</a></li>				  
+                  <li><a class="accordionItem" href="../TPIS/05_Data_Checking/simulate_oois_preview.html">Simulate OOIS Preview</a></li>                                    
+              </ul>  
+  
+              <li class="accordion"><div class="caret"></div><a>Prepare Layout</a></li>
+              <ul class="panel">
+                  <li class="accordion"><div class="caret"></div><a>Map Elements of OZP</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_bms_layers_ozp.html">Add BMS Layers</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/active_layers_ozp.html">Active Layers</a></li>                                  
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/apply_scale_style_ozp.html">Apply Scale and Style</a></li>              
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_legend_ozp.html">Add Legend</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_amendment_box_ozp.html">Add Amendment Box</a></li>            
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_signature_box_ozp.html">Add Signature Box</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_attachment_statement_ozp.html">Add Attachment Statement</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_certified_true_copy_stamp.html">Add Certified True Copy Stamp</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_logo_ozp.html">Add Logo</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_north_arrow_ozp.html">Add North Arrow</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_title_ozp.html">Add Title</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_planno_ozp.html">Add Plan Number</a></li>                    
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_ozp/add_remove_map_grid_ozp.html">Add / Remove Map Grid</a></li>  
+                  </ul>  
+                  <li class="accordion"><div class="caret"></div><a>Map Elements of Amendment Plan</a></li>
+                  <ul class="panel">
+<!--                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_xplan/add_bms_layers_xplan.html">Add BMS Layers</a></li>	-->
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_xplan/active_layers_xplan.html">Active Layers</a></li>                                                      
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_xplan/apply_scale_and_style_xplan.html">Apply Scale and Style</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_xplan/update_format.html">Update Format</a></li>                    
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_xplan/add_legend_xplan.html">Add Legend</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_xplan/update_signer_xplan.html">Update Signer</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_xplan/add_remove_map_grid_xplan.html">Add / Remove Map Grid</a></li>  
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_xplan/edit_keyplan.html">Edit Keyplan</a></li>                      
+                  </ul>                                                     
+                  <li class="accordion"><div class="caret"></div><a>Map Elements of Multi-Plan</a></li>
+                  <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/add_template.html">Add Template</a></li>
+<!--                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/apply_scale_and_style_multiplan.html">Add BMS</a></li>                    -->
+<!--                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/apply_scale_and_style_multiplan.html">Apply Scale and Style</a></li>		-->
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/add_multi-plan_legend.html">Add Multi-Plan Legend</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/add_preparation_date.html">Add Preparation Date</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/add_logo_multiplan.html">Add Logo</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/add_north_arrow_multiplan.html">Add North Arrow</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/add_title_multiplan.html">Add Title</a></li>                    
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/add_planno_multiplan.html">Add Plan No.</a></li>
+                    <li><a class="accordionItem" href="../TPIS/06_Prepare_Layout/map_elements_of_multiplan/add_remove_map_grid_multiplan.html">Add / Remove Map Grid</a></li>                    
+                  </ul>                                                                       
+              </ul>
+
+              <li class="accordion"><div class="caret"></div><a>Generate Hardcopy/ Softcopy</a></li>
+              <ul class="panel">
+                <li class="accordion"><div class="caret"></div><a>Hardcopy</a></li>
+                <ul class="panel">                
+                  <li><a class="accordionItem" href="../TPIS/07_Generate_Copies/hardcopies/print_in_full_size.html">Print in Full Size</a></li>
+                  <li><a class="accordionItem" href="../TPIS/07_Generate_Copies/hardcopies/print_in_a3_size.html">Print in A3 Size</a></li>
+                  <li><a class="accordionItem" href="../TPIS/07_Generate_Copies/hardcopies/create_plot_file.html">Create Plot File</a></li>
+                  <li><a class="accordionItem" href="../TPIS/07_Generate_Copies/hardcopies/send_plot_file.html">Send Plot File</a></li>                  
+                </ul>
+                <li class="accordion"><div class="caret"></div><a>Softcopy</a></li>
+                <ul class="panel">                
+                  <li><a class="accordionItem" href="../TPIS/07_Generate_Copies/softcopies/export_raster_image.html">Export to Raster Image</a></li>
+                  <li><a class="accordionItem" href="../TPIS/07_Generate_Copies/softcopies/list_of_softcopies.html">List of copies required</a></li>
+                </ul>                
+              </ul> 
+			  
+              <li class="accordion"><div class="caret"></div><a>Regulated Area</a></li>
+              <ul class="panel">
+				  	<li><a class="accordionItem" href="../TPIS/08_Regulated_Area/ra_template.html">Regulated Area Plan Template</a></li>			  
+					<li><a class="accordionItem" href="../TPIS/08_Regulated_Area/ra_manual.html">Regulated Area Plan Production Manual</a></li>				  
+              </ul>		
+
+              <li class="accordion"><div class="caret"></div><a>Submit Check-In</a></li>
+              <ul class="panel">
+                <li><a class="accordionItem" href="../TPIS/09_CheckIn/workflow_checkin.html">Check-In Check List</a></li>
+                <li><a class="accordionItem" href="../TPIS/09_CheckIn/file_list_of_check-in.html">File List of Check-in Submission</a></li>                  
+              </ul>                                                
+             
+              <li class="accordion"><div class="caret"></div><a>Useful Information</a></li>
+              <ul class="panel">
+                <li class="accordion"><div class="caret"></div><a>Symbols Used in TPIS</a></li>
+                <ul class="panel">
+                    <li><a class="accordionItem" href="../TPIS/10_Useful_Information/colour_table_hpt7200.html">Colour Chart for HPT7200PS Plotter</a></li>
+                    <li><a class="accordionItem" href="../TPIS/10_Useful_Information/fill_symbols_ozp_amend.html">Fill symbols for OZP_AMEND/OZP_AMEND_S6X</a></li>
+                    <li><a class="accordionItem" href="../TPIS/10_Useful_Information/fill_symbols_feat_poly.html">Fill symbols for FEAT_POLY</a></li>
+                    <li><a class="accordionItem" href="../TPIS/10_Useful_Information/line_symbols_feat_line.html">Line symbols for FEAT_LINE</a></li>
+                    <li><a class="accordionItem" href="../TPIS/10_Useful_Information/line_symbols_ozp_zone_line.html">Line symbols for OZP_ZONE_LINE</a></li>                    
+                    <li><a class="accordionItem" href="../TPIS/10_Useful_Information/point_symbols_feat_pt.html">Point symbols for FEAT_PT</a></li>
+                    <li><a class="accordionItem" href="../TPIS/10_Useful_Information/point_symbols_bhc_pt.html">Point symbols for BHC_PT</a></li>                    
+                </ul>              
+                <li><a class="accordionItem" href="../TPIS/10_Useful_Information/list_of_font.html">Font Used in TPIS</a></li>                
+                <li><a class="accordionItem" href="../TPIS/10_Useful_Information/ou_description.html">"OU" Zone Description</a></li>
+                <li><a class="accordionItem" href="../TPIS/10_Useful_Information/list_of_ozp_zone.html">List of Land Uses</a></li>
+				<li><a class="accordionItem" href="../TPIS/10_Useful_Information/list_of_plan_layout.html">List of Plan Layout</a></li>  
+                <li><a class="accordionItem" href="../TPIS/10_Useful_Information/list_of_plan_size.html">List of Current Plan Size</a></li>
+				<li><a class="accordionItem" href="../TPIS/10_Useful_Information/plan_scale_ozp.html">Plan Scale applied in OZP/DPA Plans</a></li>
+                <li><a class="accordionItem" href="../TPIS/10_Useful_Information/tpis_carto_spec.html">TPIS Cartographic Specification</a></li>
+                <li><a class="accordionItem" href="../TPIS/10_Useful_Information/sto_responsible.html">Division of Responsibilities - OZP/DPA Plans</a></li>                
+
+              </ul>                        
+          </ul>
+        </aside>
+    </nav>
+    
+    <main>
+        <div class="lastupdateddate">Last Modified: <!-- TemplateBeginEditable name="last_modified" -->13 December, 2017<!-- TemplateEndEditable --></div>
+        <!-- TemplateBeginEditable name="main_content" -->
+        <h1>Comming Soon</h1>
+        <article>
+		  <section id="background" class="background">
+			  <span class="warning">This is the sample style of warnning class</span>
+		  </section>
+			<hr>
+			<!-- START OF TOPIC CONTENTS -->
+          <section id="topic_content_1" class="topics_content">
+            <h2>Procedure in Order List Style</h2>
+            <ol>
+              <li>Small Icon IMG Class<img class="small_icon" src="../img/SeekPng.com_construction-sign-png_783876.png" width="33" height="30" alt=""/></li>
+              <li>Step 2</li>
+              <li>Click image to enlarge.<img onClick="showModal(this)"class="content_graphic" src="../img/check_back_soon.jpg" width="400" height="211" alt="Comming Soon"/></li>
+            </ol>
+          </section>
+			<!-- END OF TOPIC CONTENTS -->
+			<hr>			
+			<!-- START OF TOPIC CONTENTS -->
+          <section id="topic_content_2" class="topics_content">
+			  <h2>Content in GIRD Style</h2>
+            <div class="divRow"> <!-- 2 Col in 1 Row -->
+			  	<div class="divCol">Row 1 Col 1</div> 
+				<div class="divCol">Row 1 Col 2</div> 
+			 </div>
+			<div class="divRow"> <!-- 2 Col in 1 Row -->
+			  	<div class="divCol">Row 2 Col 1</div> 
+				<div class="divCol">Row 2 Col 2</div> 
+			 </div>
+			 <div>
+			 <img onClick="showModal(this)" alt="Comming Soon" src="../img/under-construction.png" class="content_graphic"/>
+		     <figcaption>styled figcaption tag</figcaption>
+			 </div>
+          </section>
+			<!-- END OF TOPIC CONTENTS -->						
+			<hr>
+			<!-- START OF TOPIC CONTENTS -->
+          <section id="topic_content_3" class="topics_content">
+			  <h2>Accordion Content by HTML5</h2>
+			  <details>
+				<summary>Title 1</summary>
+				<p>Expanded Details...............</p>				
+			  </details>
+			  <details>
+				<summary>Title 2</summary>
+				<div class="divRow">
+					<div class="divCol">Row 1 Col1</div>
+					<div class="divCol">Row 1 Col2</div>
+				</div>
+			  </details>			  
+			  <details>
+				<summary>Title 3</summary>
+				 <img onClick="showModal(this)" alt="Comming Soon" src="../img/under-construction.png" class="content_graphic"/>
+				 <figcaption>styled figcaption tag</figcaption>
+			  </details>			  			  
+          </section>
+			<!-- END OF TOPIC CONTENTS -->				
+		   <hr>
+			<!-- START OF TOPIC CONTENTS -->
+          <section id="topic_content_4" class="topics_content">
+			  <h2>Content in Table Style</h2>
+         	<table>
+				<tr>
+					<th>Table Header 1</th>
+					<th>Table Header 2</th>
+					<th>Table Header 3</th>
+					<th>Table Header 4</th>
+					<th>Remarks</th>
+				</tr>
+			  	<tr>
+					<td>Row 2</td>
+					<td>Row 2</td>
+					<td>Row 2</td>
+					<td>Row 2</td>
+					<td>Row 2</td>					
+				</tr>
+			  	<tr>
+					<td>Row 3</td>
+					<td>Row 3</td>
+					<td>Row 3</td>
+					<td>Row 3</td>
+					<td>Row 3</td>					
+				</tr>		
+			  	<tr>
+					<td>Row 4</td>
+					<td>Row 4</td>
+					<td>Row 4</td>
+					<td>Row 4</td>
+					<td>Row 4</td>					
+				</tr>						
+			  </table>
+          </section>
+			<!-- END OF TOPIC CONTENTS -->			
+			<hr>
+          <!--START OF RELATED TOPICS-->
+          <section class="related_topics">
+			  <h2>Related Topics</h2>
+			  <ul>
+				<li><a href="#">Related Topics 1</a></li>				
+			  </ul>
+          </section>			
+        </article>
+		<!-- END OF RELATED TOPICS -->
+        <!-- TemplateEndEditable -->
+    </main>    
+	<footer></footer>
+</div>
+<button class="btnbackTOP" onclick="backtoTop()" id="btnbackTOP" title="Go to top">Top</button>
+<script src="../js/responisive_web.js"></script>
+<script>
+	document.getElementsByTagName("title")[0].innerHTML = "::TPIS:: " + document.getElementsByTagName("h1")[0].innerHTML
+	var topNavBar = 50;
+var footer = 48;
+var height = $(window).height();
+$('.sidebar').css('height', (height - (topNavBar+footer)));
+
+$(window).resize(function(){
+    var height = $(window).height();
+    $('.sidebar').css('height', (height - (topNavBar+footer)));
+});
+</script>
+<script src="../js/vertical_accordion_menu.js"></script>
+<script src="../js/backtoTop.js"></script>
+	
+<div id="imgModal" class="modal">
+  <span id="imgModalClose" class="imgModalClose">&times;</span>
+  <img class="modal-content" id="img01">
+  <figcaption class="imgModalCaption" id="imgModalCaption"></figcaption>
+</div>
+<script language="javascript" src="../js/showModal.js">
+</script>
+
+ <!-- TemplateBeginEditable name="HiddenCavans" -->
+
+<!-- TemplateEndEditable -->	
+</body>
+</html>

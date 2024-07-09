@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+#myInput {
+    background-image: url("../../img/searchicon.png"); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+}
+
+
+#myUL {
+    /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+	list-style:none;
+	text-decoration:none;
+	width:100%;	
+}	
+
+#myUL ul.panel {
+	display: none;	
+	padding-left:25px;	
+}
+
+#myUL ul.panel.show {
+    display: block !important;
+}
+
+#myUL ul.panel a{
+	  text-decoration: none; 
+	  display:inline-block;
+	  color:inherit;
+}
+
+
+#myUL li{
+	 /*margin: inherit; */
+	cursor: pointer;
+	display:block;	
+	border: #f8eee7 2px solid;	/*Border coor: Clean*/		
+	padding:2px 8px 2px 2px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+#myUL li:hover{
+	background-color: #FFA000;
+}
+
+
+#myUL li.current{
+	background-color:#e5f2ff;
+	color:blue;
+}
+
+/*Heading list*/ 
+#myUL li.accordion{
+	font-weight:bold;
+	font-size:22px;
+	margin-top: -1px; /* Prevent double borders */
+	padding:5px 2px 5px 2px;/* Add some padding */
+	/*background-color:#6698FF; li Heading background color */ 
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+  
+}
+
+
+#myUL li.accordion.active{ 	/*For frameset version*/
+/*	background-color:#b3daff;*/
+/*    border-bottom:none;
+    border-right: 6px solid transparent;
+    border-left-color: transparent;
+    border-top-color:initial;*/
+}
+
+
+#myUL a{
+	color:inherit;
+	text-decoration:inherit;
+	display:inline-block;
+}
+
+
+
+
+/* carets */
+#myUL li.accordion > div.caret {
+    color:inherit;
+    display:inline-block; /*float:right;*/
+    margin-bottom:0px;
+	margin-left:10px;
+    margin-right:12px;
+    width: 0;
+    height: 0;
+    overflow:hidden;/*for IE6*/
+    border-style:solid;
+    border-width:6px; /*caret size is 6px now*/
+    position:relative;
+    border-bottom:6px solid transparent;
+    border-right: none;
+    border-left-color:initial;
+    border-top-color: transparent;
+}
+
+#myUL li.accordion.active > div.caret {
+    margin-bottom:3px;
+    margin-right:6px;
+    border-bottom:none;
+    border-right: 6px solid transparent;
+    border-left-color: transparent;
+    border-top-color:initial;
+}
+
+
+#topNav {
+  overflow: hidden;
+  float: right;
+}
+#topNav a {
+  float: left;
+  display: block;
+  padding:10px;
+  
+  text-align: center;	
+  text-decoration: none;
+  
+  font-size: 18px;
+  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  color:#000A3B;
+}
+#topNav a:hover {
+  background-color: #b3d9ff;
+  color:darkblue;
+}
+#topNav .active {
+  background-color: #000A3B;
+  color:yellow;
+  font-weight:bold;
+}
+#topNav .icon {
+  display: none;
+}

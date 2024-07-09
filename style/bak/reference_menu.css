@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+
+#myInput {
+    background-image: url("../../img/searchicon.png"); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+}
+#myUL {
+    /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+	list-style:none;
+	text-decoration:none;
+	font-size:20px;
+	color:#000A3B;	
+}	
+#myUL ul{
+	font-size:18px;
+}
+#myUL ul>ul{
+	font-size:16px;
+}
+#myUL ul>ul>li{
+	font-size:16px;
+}
+#myUL ul.panel {
+    display: none;	
+	padding-left:25px;
+	/*padding-left:1px;*/
+}
+#myUL ul.panel.show {
+    display: block !important;
+}
+#myUL li{
+	cursor: pointer;
+	display:block;
+	padding-top:5px;
+	padding-bottom: 5px;
+
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#myUL li:hover{
+	background-color: Peru;
+	color:#4a2615;
+}
+
+#myUL li.current{
+	background-color:PeachPuff;
+	color:blue;
+}
+
+#myUL li.accordion{
+    font-weight:bold;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+    margin-bottom:0px;
+}
+
+#myUL li.accordion.active{ 	/*For frameset version*/
+/*	background-color:#b3daff;*/
+/*    border-bottom:none;
+    border-right: 6px solid transparent;
+    border-left-color: transparent;
+    border-top-color:initial;*/
+}
+#myUL a{
+	display:inline-block;
+	color:inherit;
+	text-decoration:inherit;
+}
+
+/* carets */
+#myUL li.accordion > div.caret {
+    color:inherit;
+    display:inline-block; /*float:right;*/
+    margin-bottom:0px;
+    margin-right:12px;
+	margin-left:10px;	
+    width: 0;
+    height: 0;
+    overflow:hidden;/*for IE6*/
+    border-style:solid;
+    border-width:6px; /*caret size is 6px now*/
+    position:relative;
+    border-bottom:6px solid transparent;
+    border-right: none;
+    border-left-color:initial;
+    border-top-color: transparent;
+}
+
+#myUL li.accordion.active > div.caret {
+    margin-bottom:3px;
+    margin-right:6px;
+    border-bottom:none;
+    border-right: 6px solid transparent;
+    border-left-color: transparent;
+    border-top-color:initial;
+}
+
+#topNav {
+  overflow: hidden;
+  float: right;
+}
+#topNav a {
+  float: left;
+  display: block;
+  padding:10px;
+  
+  text-align: center;	
+  text-decoration: none;
+  
+  font-size: 18px;
+  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  color:PaleGoldenRod;
+  background-color:#9f512d;	/*same with header color*/  
+}
+#topNav a:hover {
+  background-color: SaddleBrown;
+  color:yellow;
+}
+#topNav .active {
+  background-color: #4a2615;
+  color:Orange;
+  font-weight:bold;
+}
+#topNav .icon {
+  display: none;
+}
