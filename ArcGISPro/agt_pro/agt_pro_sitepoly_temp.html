@@ -1,0 +1,366 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/arcgispro_index.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>::ArcGIS Help::</title> 
+<!-- InstanceEndEditable -->
+<!-- title will be updated by Javascript in bottom -->
+<link rel="icon" href="../../img/Portal-Icon-2.ico"/> 
+<link rel="stylesheet" type="text/css" href="../../style/_main.css">
+<link rel="stylesheet" type="text/css" href="../../style/arcgispro_theme.css">
+<!-- <script src="../js/tpis_loadTemplate.js"></script> -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+
+</head>
+
+<body onLoad="loadCurrent_item()">
+<div class="container" id="container">
+    <div class="testing">
+        filename: <span id="filename"></span> , accordionItem~a-href:<span id="ahref"></span><br>
+        filters: <span id="searchwords"></span><br>
+        matched #myUL&gt;li: <span id="match_li"></span> <br> 
+        not matched #myUL&gt;li: <span id="notmatch_li"></span><br>
+        no.of "&lt;a&gt;&quot; tag: <span id="no_of_ahref"></span><br>
+        no.of  &quot;&lt;a&gt;&quot; tag with href: <span id="no_of_a"></span><br>
+        match_li length: <p id="match_li_check"></p><br>
+    </div>
+
+	<header>
+      <div id="topNav" class="topNav">
+        <a href="javascript:void(0);" class="icon" onclick="opentopNav()">&#9776;</a>
+        <a href="../../index.html">Carto Portal</a>          
+        <a href="../../CAD/index.html">CAD</a>      
+	    <a href="../../ArcGIS/index.html">ArcGIS</a>
+		<a href="../index.html" class="active">ArcGIS Pro</a> 
+        <a href="../../TPIS/index.html">TPIS</a>
+		<a href="../../QGIS/index.html">QGIS</a>
+		<a href="../../FME/index.html">FME</a>
+        <a href="../../ODPLP/index.html">ODP/LP</a>                      
+        <a href="../../MAINTENANCE/index.html">Maintenance</a>            
+        <a href="../../TRAINING/index.html">Training</a>      
+        <a href="../../REFERENCE/index.html">Reference</a>          
+        <a href="../../contact.html">Contact Us</a>     
+        <a href="../../about_portal.html">About Portal</a>                                     
+      </div>
+    </header>
+    
+    <div id="sideNavOpen"><a href="#" onclick="opensideNav()">ArcGIS Pro</a></div>
+ 
+	<nav>
+    	<aside id="sideNav" class="sideNav">
+          <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closesideNav()">&times;</a>
+          <input type="text" id="myInput" onkeyup="accordionSearch()" placeholder="Search for topics...">
+          <ul id="myUL">
+              <li class="accordion"><div class="caret"></div><a>What's new ?</a></li>
+                <ul class="panel">
+	              <li><a class="accordionItem" href="../Latest_Update/update_history.html" target="_self">Update History</a></li>              
+                </ul>
+			  <li class="accordion"><div class="caret"></div><a>Get Started</a></li>
+                <ul class="panel">
+                  <li><a class="accordionItem" href="../get_started/basic_workflow.html">Basic Workflow in ArcGIS Pro</a></li>
+                </ul>
+			  <li class="accordion"><div class="caret"></div><a>Environment Settings</a></li>
+                <ul class="panel">
+                  <li><a class="accordionItem" href="../Environment_Setting/suggest_setting.html">Suggested Settings</a></li>
+				  <li><a class="accordionItem" href="../Environment_Setting/agt_tpis_pro_addins.html">AGT / TPIS Pro Add-Ins</a></li>
+                </ul>
+			  
+			  <li class="accordion"><div class="caret"></div><a>TPIS Pro</a></li>
+                <ul class="panel">
+					<li class="accordion"><div class="caret"></div><a>Edit rTPIS Data</a></li>
+						<ul class="panel">
+							<li class="accordion"><div class="caret"></div><a>Prepare Notes/ES</a></li>
+								<ul class="panel">
+									<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/output_SP_codes_for_notes.html">Output SP Codes for Notes</a></li>
+								</ul>
+							</ul>
+				     <li class="accordion"><div class="caret"></div><a>Check rTPIS Data</a></li>
+						<ul class="panel">
+							<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/SP_zone_area_summary.html">SP Zone Area Summary</a></li>
+							<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/tpis_checker_tools.html">TPIS Checker Tools</a></li>
+							<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/data_verification_tool.html">Date Verification Tool</a></li>
+							<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/create_road_polygon.html">Create ROAD Polygon</a></li>
+							<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/routine_topology_check.html">Routine Topology Check</a></li>
+							<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/delete_redundant_records.html">Delete Redundant Records</a></li>
+							<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/re-update_ozp_attributes.html">Update OZP Attributes</a></li>
+							<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/attribute_checker.html">Attribute Checker</a></li>		
+						</ul>
+					<li class="accordion"><div class="caret"></div><a>Generate Hardcopy/Softcopy</a></li>
+						<ul class="panel">
+							<li class="accordion"><div class="caret"></div><a>Softcopy</a></li>
+								<ul class="panel">
+									<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/export_1_bit_BW_tiff.html">Export 1-bit BW Tiff</a></li>	<li><a class="accordionItem" href="../tpis_pro/Check_rTPIS_Data/export_JPEG.html">Export JPEG</a></li>
+								</ul>
+							</ul>			  
+                  <li><a class="accordionItem" href="../tpis_pro/rtpis_data_schema.html">rTPIS Data Schema</a></li>
+				  <li><a class="accordionItem" href="../tpis_pro/rtpis_editing_data.html">Remarks for Editing rTPIS Data</a></li>
+				  <li><a class="accordionItem" href="../tpis_pro/rtpis_using_arcmap_bms.html">Use ArcMap BMS in TPIS</a></li>
+                </ul>
+			  
+              <li class="accordion"><div class="caret"></div><a>Advanced GIS Tools Pro (AGT Pro)</a></li>
+                <ul class="panel">
+					<li><a class="accordionItem" href="agt_pro_data_catalog.html">AGT Pro - Data Catalog</a></li>
+					<li><a class="accordionItem" href="agt_pro_mapping.html">AGT Pro - Mapping</a></li>
+					<li><a class="accordionItem" href="agt_pro_editing.html">AGT Pro - Editing</a></li>
+					<li><a class="accordionItem" href="agt_pro_enquiry.html">AGT Pro - Enquiry</a></li>
+					<li><a class="accordionItem" href="agt_pro_data_management.html">AGT Pro - Data Management</a></li>
+					<li><a class="accordionItem" href="agt_pro_sitepoly.html">AGT Pro - Site Polygon Upl/Del</a></li>     
+                </ul>
+			  
+			  <li class="accordion"><div class="caret"></div><a>Self-Learning Info Kit</a></li>
+                <ul class="panel">
+                  <li><a class="accordionItem" href="../Learn_kit/learn_infokit.html">Self-Learning Info Kit</a></li>                  
+                </ul>
+
+
+              
+                     
+          </ul>
+        </aside>
+    </nav>
+    
+    <main>
+        <div class="lastupdateddate">Last Modified: <!-- InstanceBeginEditable name="last_modified" -->02 May, 2024<!-- InstanceEndEditable --></div>
+        <!-- InstanceBeginEditable name="main_content" -->
+        <h1>AGT Pro - Site Polygon Upl/Del</h1>
+        <article>
+			<section class="background" id="background">
+				<h2>Background</h2>
+				<p>This function allows user to upload site polygon for Planning Application and Representation Information System (PARIS)
+				  <ul>
+					<li>S12A (Applications for Amendment of Plan)</li>
+					<li>S16 S17 (Applications for Planning Permission)</li>
+					<li>Representations in respect to draft plan.</li>
+					<li>Further Representations in respect to propose amendment plan.</li>
+				  </ul>
+				</p>
+				<p>User is also allowed to <a href="#delete_polygon">delete polygon</a> if necessary.</p>
+			
+				<br>
+				<hr>
+				
+				<h2>Handling FI cases polygon</h2>
+				<p>The goal is to minimize the duplicated polygons for the same cases no. while maintaining data accuracy.</p>
+					<ul>
+						<li>For FI cases with <strong>unchanged polygons</strong>, there is no need to upload them through AGT <img src="img/agt_sitepoly_toolbar.png" width="63" height="59" alt=""/> in ArcMap/ArcGIS Pro. This can save time and effort for users to upload or handle duplicated polygons.</li>
+						
+						<li>Users are only required to <strong>upload the FI polygon</strong> if there are any <strong>spatial changes</strong>. This includes any modifications to the existing polygon.</li>
+					</ul>
+				<p>Illustration</p>
+				<img class="content_graphic" src="img/agt_sitepoly_FI.png" width="672" height="720" alt=""/>
+				
+			</section>
+			<hr>
+		<!-- START OF UPLOAD PROCEDURE -->
+			<section class="topics_content" id="topics_content">
+				<h2>Upload Procedure</h2>
+				<nav class="tab">
+					<button class="tab_links" onclick="openTab(event, 'application_polygon')" id="defaultOpen">Application Polygon</button>
+					<button class="tab_links" onclick="openTab(event, 'rep_polygon')">Representation Polygon</button>
+				</nav>
+				<!-- APPLICATION POLYGON -->
+			  <div class="tab_content" id="application_polygon">
+				<h3>Application Polygon</h3>
+				  <ol>
+					  <li>Activate the toolbar “AGT – Site Polygon Upl/Del” is opened by clicking “Customize” on the menu bar, then select “toolbars”, then click on “AGT – Site Polygon Upl/Del”. </li>
+					  <li>On the “AGT – Site Polygon Upl/Del” toolbar, click on “Upload/Delete site polygon” <img class="icon" src="img/agt_uploadpolyicon.PNG" width="24" height="24" alt=""/>. An “Upload/Delete site polygon to CPDH” window will appear.</li>
+					  <img class="content_graphic" src="img/agt_sitepoly01.jpg" width="1172" height="570" alt=""/>
+					  <li>Click on the “Browse” button and navigate to the polygon that needed to be uploaded. The tool will try to classify the type of cases according to the file name. <span class="warning">Therefore, please make sure the file name format is correct.</span>
+							
+							  <button class="acc_content_header">File Format of Amendment of Plan Polygon (S12A)</button>    
+							  <div class="acc_content">
+
+								  <table class="tbl_2cols_list">
+									  <tr>
+										  <th>File Name</th>
+										  <th>Result to CPDH</th>
+									  </tr>
+									  <tr>
+										  <td colspan="2">Without Further Information</td>
+									  </tr>
+									  <tr>
+										  <td>Y_TM-LTYY_2.dgn</td>
+										  <td>case Y/TM-LTYY/2 will be added</td>
+									  </tr>
+									  <tr>
+										  <td colspan="2">With Further Information</td>
+									  </tr>
+									  <tr>
+										  <td> Y_YL-LFS_1_F2.dgn</td>
+										  <td>case Y/YL-LFS/1 with FI No. 2 will be added</td>
+									  </tr>
+								  </table>
+							  </div>
+						  <hr>
+							
+							  <button class="acc_content_header">File Format of Planning Permission Polygon (S16/S16A/S17)</button>
+							  <div class="acc_content">
+								  <table class="tbl_2cols_list">
+									  <tr>
+										  <th>File Name</th>
+										  <th>Result to CPDH</th>
+									  </tr>
+									  <tr>
+										  <td colspan="2">S16 Without Further Information</td>
+									  </tr>
+									  <tr>
+										  <td>A_YL-HT_645.dgn</td>
+										  <td>case A/YL-HT/645 will be added, APP_CASE_CODE = S16</td>
+									  </tr>
+									  <tr>
+										  <td colspan="2">S16 With Further Information</td>
+									  </tr>
+									  <tr>
+										  <td>A_YL-NSW_233_F4.dgn</td>
+										  <td>case A/YL-NSW/233 with FI No. 4 will be added, APP_CASE_CODE = S16</td>
+									  </tr>
+									  <tr>
+										  <td colspan="2">S17 (Review of S16) Without Further Information</td>
+									  </tr>
+									  <tr>
+										<td>A_YL-NSW_233_RV.dgn</td>
+										  <td>Review case of A/YL-NSW/233 will be added (Review of S16), APP_CASE_CODE = S17S16</td>
+									  </tr>
+									  <tr>
+										<td>A_YL-NSW_249-1_RV.dgn</td>
+										  <td>Review case of A/YL-NSW/249-1 will be added (Review of S16A), APP_CASE_CODE = S17S16</td>
+									  </tr>					 
+									  <tr>
+										  <td colspan="2">S17 (Review of S16) With Further Information</td>
+									  </tr>
+									  <tr>
+										  <td>A_YL-NSW_233_RV_F4.dgn</td>
+										  <td>Review case A/YL-NSW/233 with FI No. 4 will be added, APP_CASE_CODE = S17S16</td>
+									  </tr>					 
+								  </table>						
+							  </div>						
+							
+					  </li>
+						
+					  <img class="content_graphic" src="img/agt_sitepoly02.jpg" width="1172" height="570" alt=""/>
+					  <li>Click upload and Start the process</li>
+					  <img class="content_graphic" src="img/agt_sitepoly_start.jpg" width="237" height="141" alt=""/>
+					  <li>Once uploaded, the name of the polygon will be shown. </li>
+					  <img class="content_graphic" src="img/agt-sitepoly_complete.jpg" width="217" height="141" alt=""/>
+					  <li>If the polygon is application case, the tool will return the CA code(s) of the polygon</li>
+					  <img class="content_graphic" src="img/agt-sitepoly_ca.jpg" width="270" height="155" alt=""/>
+					  <li>Open the attribute table and verify the case no, polygon location and shape.</li>
+				      <img class="content_graphic" src="img/agt_sitepoly06.JPG" width="949" height="810" alt=""/>
+				  </ol>											
+				</div>
+				<!-- REPRESENTATION POLYGON -->
+				<div class="tab_content" id="rep_polygon">
+					<h3>Representation Polygon</h3>
+					<ol>
+						<li>Activate the toolbar “AGT – Site Polygon Upl/Del” is opened by clicking “Customize” on the menu bar, then select “toolbars”, then click on “AGT – Site Polygon Upl/Del”. </li>
+						<li>On the “AGT – Site Polygon Upl/Del” toolbar, click on “Upload/Delete site polygon” <img class="icon" src="img/agt_uploadpolyicon.PNG" width="24" height="24" alt=""/>. An “Upload/Delete site polygon to CPDH” window will appear.</li>
+						<img class="content_graphic" src="img/agt_sitepoly01.jpg" width="1172" height="570" alt=""/>
+						<li>Click on the “Browse” button and navigate to the polygon that needed to be uploaded.
+							<button class="acc_content_header">File Format of Representation</button>    
+							<div class="acc_content">
+								<table class="tbl_2cols_list">
+									<tr>
+										<th>File Name</th>
+										<th>Result to CPDH</th>
+									</tr>
+									<tr>
+										<td colspan="2">For 1 case only</td>
+									</tr>
+									<tr>
+										<td>R_S_NE-MTL_2#1.dgn</td>
+										<td>Polygon uploaded for Representation No. R/S/NE-MTL/2-1, 1 Polygon for 1 cases</td>
+									</tr>
+									<tr>
+										<td colspan="2">For duplicate case</td>
+									</tr>
+									<tr>
+										<td>R_S_NE-MTL_2#4-9.dgn</td>
+										<td>polygon uploaded for Representation Case No. R/S/NE-MTL/2-4 to R/S/NE-MTL/2-9, 1 polygon for 6 cases</td>
+									</tr>					
+									<tr>
+										<td>R_S_NE-MTL_2#1-3,10.dgn</td>
+										<td>polygon uploaded for Representation Case No. R/S/NE-MTL/2-1, R/S/NE-MTL/2-2, R/S/NE-MTL/2-3 and R/S/NE-MTL/2-10, 1 polygon for 4 cases</td>
+									</tr>
+								</table>
+							</div>
+							<hr>
+							<button class="acc_content_header">File Format of Further Representation</button>    
+							<div class="acc_content">						
+								<table class="tbl_2cols_list">
+									<tr>
+										<th>File Name</th>
+										<th>Result to CPDH</th>
+									</tr>
+									<tr>
+										<td colspan="2">For 1 case only</td>
+									</tr>
+									<tr>
+										<td>R_S_TP_26#F2.dgn</td>
+										<td>Polygon uploaded for Further Representation No. R/S/TP/26-F2, 1 Polygon for 1 cases</td>
+									</tr>
+									<tr>
+										<td colspan="2">For duplicate case</td>
+									</tr>
+									<tr>
+										<td>R_S_TP_26#F4-9.dgn</td>
+										<td>Polygon uploaded for Further Representation No. R/S/TP/26-F4 to R/S/TP/26-F9, 1 polygon for 6 cases</td>
+									</tr>					
+									<tr>
+										<td>R_S_TP_26#F1,3,10-12.dggn</td>
+										<td>Polygon uploaded for Further Representation No. R/S/TP/26-F1, R/S/TP/26-F3, R/S/TP/26-F10 to R/S/TP/26-F12, 1 polygon for 5 cases</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>The tool will try to classify the type of cases according to the file name. <span class="warning">Therefore, please make sure the file name format is correct.</span>Check the Plan No. and Case No. If the file name is correct, the involed plan no. and the case no will be shown.</li>
+						<img class="content_graphic" src="img/agt-reppoly01.jpg" width="1172" height="570" alt=""/>
+						<li>Click upload and Start the process</li>
+					    <img class="content_graphic" src="img/agt_sitepoly_start.jpg" width="237" height="141" alt=""/>
+						<li>Once uploaded, the name of the polygon will be shown. </li>
+					    <img class="content_graphic"  src="img/agt-reppoly_completed.jpg" width="350" height="141" alt=""/>
+						<li>Open the attribute table and verify the case no, polygon location and shape.</li>
+					  	<img src="img/agt-reppoly_attributetable.jpg" width="1254" height="558" alt=""/>
+						<li>Click and highlight the record, then click on "Table options &gt; Related Tables", then select “Relate_Repn_Case:PRS_ADM.REPN_POLY”. This will open a related table showing the duplicates. This indicates the duplicates are successfully uploaded.</li>
+					   <img src="img/agt-reppoly_relatedtable.jpg" width="1238" height="529" alt=""/>
+                    </ol>
+				</div>
+			</section>
+			<!-- END OF UPLOAD PROCEDURE -->
+			<hr>
+			<!-- START OF DELETE PROCEDURE -->
+			<section class="topics_content" id="delete_polygon">
+				<h2>Delete Procedure</h2>
+				<ol>
+					<li>Activate the toolbar “AGT – Site Polygon Upl/Del” is opened by clicking “Customize” on the menu bar, then select “toolbars”, then click on “AGT – Site Polygon Upl/Del”. </li>
+					<li>On the “AGT – Site Polygon Upl/Del” toolbar, click on “Upload/Delete site polygon” . An “Upload/Delete site polygon to CPDH” window will appear.</li>
+					<li>Click on the “Delete” tab on the top left hand corner.</li>					
+					
+					<li>Enter the <strong>FILENAME</strong> of the polygon which you want to delete.</li>
+					<img src="img/agt-delpolygon01.jpg" width="1172" height="570" alt="" class="content_graphic"/>
+					<li>Click delete and Start the process.</li>
+				  	<img class="content_graphic" src="img/agt_sitepoly_startdel.jpg" width="275" height="141" alt=""/>
+					<li>Delete completed and the <strong>FILENAME</strong> will be also shown in the message box.</li>
+					<img class="content_graphic" src="img/agt-sitepoly_completedel.jpg" width="212" height="141" alt=""/>
+				  <li>Check if the record is deleted by opening the “Attribute table”.</li>
+			      
+              </ol>
+			</section>
+			<!-- END OF DELETE PROCEDURE -->
+		</article>
+<script src="../../js/accordion_content.js"></script>        		
+        <!-- InstanceEndEditable -->
+    </main>    
+	<footer></footer>
+</div>
+<button class="btnbackTOP" onclick="backtoTop()" id="btnbackTOP" title="Go to top">Top</button>
+<script src="../../js/responisive_web.js"></script>
+<script>
+	document.getElementsByTagName("title")[0].innerHTML = "::ArcGIS:: " + document.getElementsByTagName("h1")[0].innerHTML
+</script>
+<script src="../../js/vertical_accordion_menu.js"></script>
+<script src="../../js/backtoTop.js"></script>
+
+</body>
+<!-- InstanceEnd --></html>
